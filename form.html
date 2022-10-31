@@ -3,9 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style.css">
+    <script src="/script.js"></script>
     <title>Document</title>
+
 </head>
 <body>
     <header>
@@ -23,9 +26,17 @@
             <label for="check">Confirmação de senha: </label>
             <input type="password" name="chk" id="check"><br>
             <label for="identidy">RG: </label>
-            <input type="number" name="idt" id="identidy"><br>
+            <input type="text" name="idt" id="identidy"><br>
             <label for="zip">CEP: </label>
-            <input type="number" name="zp" id="zip"><br>
+            <input type="text" name="zp" id="zip" onblur="pesquisaCep(this.value)"><br>
+            <label>Rua:
+            <input name="rua" type="text" id="rua" size="60" /></label><br />
+            <label>Bairro:
+            <input name="bairro" type="text" id="bairro" size="40" /></label><br />
+            <label>Cidade:
+            <input name="cidade" type="text" id="cidade" size="40" /></label><br />
+            <label>Estado:
+            <input name="uf" type="text" id="uf" size="2" /></label><br />
             <input type="button" name="buton" id="send" value="Enviar">
         </form>
     </main>
