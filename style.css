@@ -1,3 +1,7 @@
 #name, #email, #password, #check, #identidy, #zip, #send, #street, #district, #city, #uf{
     margin-top: 1rem;
 }
+
+.forgot{
+    text-align: center;
+}
