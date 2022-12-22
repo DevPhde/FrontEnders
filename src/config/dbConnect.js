@@ -1,6 +1,8 @@
 import mongoose from "mongoose";
+import dotenv from "dotenv";
+dotenv.config();
 
-mongoose.connect("mongodb+srv://resilia:123@cluster0.rhnstip.mongodb.net/project-m2");
+mongoose.connect(process.env.MONGODB_URI);
 
 let db = mongoose.connection;
 

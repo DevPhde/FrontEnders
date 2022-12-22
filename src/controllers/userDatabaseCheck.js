@@ -25,7 +25,7 @@ function jsonResponse(result, fieldRG, fieldEmail){
    const haveTwoFields = fieldRG? "" : fieldEmail ? "" : "e";
 
    function response (result) {
-      const message = result ? "" : `Campo ${haveFieldRG} ${haveTwoFields} ${haveFieldEmail} já cadastrado.`;
+      const message = result ? undefined : `Campo ${haveFieldRG} ${haveTwoFields} ${haveFieldEmail} já cadastrado.`;
       const response = new ResponseRegister(result, message);
       return response
    }
