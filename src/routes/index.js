@@ -3,7 +3,7 @@ import router from "./userRoutes.js";
 
 const routes = (app) => {
     app.route('/').get((req, res) => {
-        res.status(200).send("REGISTER API");
+        res.status(200).send("AUTH API");
     })
     
     app.use(
