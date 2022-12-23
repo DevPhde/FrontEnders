@@ -5,4 +5,4 @@ class ResponseAuthentication {
     }
  }
 
- export default ResponseAuthentication
+ export default ResponseAuthentication;

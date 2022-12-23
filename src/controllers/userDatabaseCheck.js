@@ -4,17 +4,16 @@ import ResponseRegister from "../models/ResponseRegister.js";
 async function getRgAndEmail(user) {
    const foundRG = await users.findOne ({ "rg" : user.rg });
    const foundEmail = await users.findOne ({ "email" : user.email });
-
    return isValidUser(foundRG, foundEmail)
 }
 
 function isValidUser(foundRG, foundEmail) {
-   let validRG = false
-   let validEmail = false
+   let validRG = false;
+   let validEmail = false;
    if (foundRG === null) validRG = true;
    if (foundEmail === null) validEmail = true;
 
-   const bothValid = validRG && validEmail == true
+   const bothValid = validRG && validEmail == true;
    return bothValid ? jsonResponse(true, validRG, validEmail) : jsonResponse(false, validRG, validEmail);
 
 }
@@ -32,4 +31,4 @@ function jsonResponse(result, fieldRG, fieldEmail){
    return response(result)
 }
 
-export default getRgAndEmail
+export default getRgAndEmail;

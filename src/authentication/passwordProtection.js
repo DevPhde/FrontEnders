@@ -7,7 +7,7 @@ async function passwordCryptography(user) {
 }
 
 async function passwordDecryptography(reqPassword, passwordDB){
-    const salt = passwordDB.slice(0, 29)
+    const salt = passwordDB.slice(0, 29);
     return (bcrypt.hashSync(reqPassword, salt) === passwordDB) === true ? true : false
 }
 
