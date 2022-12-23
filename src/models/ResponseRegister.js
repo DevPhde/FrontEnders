@@ -5,4 +5,4 @@ class ResponseRegister {
     }
  }
 
- export default ResponseRegister;
+ export default ResponseRegister
