@@ -1,46 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" 
-    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="/style.css">
-    <script src="/script.js"></script>
     <title>Document</title>
 
 </head>
+
 <body>
+
     <header>
-        <h2>ESPERANDO A HEADER</h2>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+              <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Menu
+                    </a>
+                    <ul class="dropdown-menu fundo">
+                      <li><a class="dropdown-item nav-link" href="#">Action</a></li>
+                      <li><a class="dropdown-item nav-link" href="#">Another action</a></li>
+                      <li><a class="dropdown-item nav-link" href="#">Something else here</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+        </nav>
     </header>
 
     <main>
-        <!-- <form action="">
-            <label for="name">Nome: </label>
-            <input type="text" name="nme" id="name"><br>
-            <label for="email">Email: </label>
-            <input type="email" name="eml" id="email"><br>
-            <label for="password">Senha: </label>
-            <input type="password" name="psw" id="password"><br>
-            <label for="check">Confirmação de senha: </label>
-            <input type="password" name="chk" id="check"><br>
-            <label for="identidy">RG: </label>
-            <input type="text" name="idt" id="identidy"><br>
-            <label for="zip">CEP: </label>
-            <input type="text" name="zp" id="zip" onblur="pesquisaCep(this.value)"><br>
-            <label>Rua:
-            <input name="rua" type="text" id="street" size="60" /></label><br />
-            <label>Bairro:
-            <input name="bairro" type="text" id="district" size="40" /></label><br />
-            <label>Cidade:
-            <input name="cidade" type="text" id="city" size="40" /></label><br />
-            <label>Estado:
-            <input name="uf" type="text" id="uf" size="2" /></label><br />
-            <input type="button" name="buton" id="send" value="Enviar">
-        </form> -->
+        <br>
         <div class="col-md-10 mx-auto col-lg-5">
             <form class="p-4 p-md-5 border rounded-3 bg-light">
                 <div class="form-floating mb-3">
@@ -48,24 +47,24 @@
                     <label for="floatingInput">Nome</label>
                 </div>
                 <div class="form-floating mb-3">
-                  <input type="email" id="email" class="form-control" placeholder="name@example.com">
-                  <label for="floatingInput">Email</label>
+                    <input type="email" id="email" class="form-control" placeholder="name@example.com">
+                    <label for="floatingInput">Email</label>
                 </div>
                 <div class="form-floating mb-3">
-                  <input type="password" id="password" class="form-control" placeholder="Password">
-                  <label for="floatingPassword">Senha</label>
+                    <input type="password" id="password" class="form-control" placeholder="Password">
+                    <label for="floatingPassword">Senha</label>
                 </div>
                 <div class="form-floating mb-3">
                     <input type="password" id="check" class="form-control" placeholder="Password">
                     <label for="floatingPassword">Confirmação de senha</label>
-                </div>  
+                </div>
                 <div class="form-floating mb-3">
                     <input type="text" id="identidy" class="form-control" placeholder="name@example.com">
                     <label for="floatingInput">RG</label>
                 </div>
                 <div class="form-floating mb-3">
                     <input type="text" name="zp" id="zip" onblur="pesquisaCep(this.value)" class="form-control"
-                     placeholder="name@example.com">
+                        placeholder="name@example.com">
                     <label for="floatingInput">CEP</label>
                 </div>
                 <div class="form-floating mb-3">
@@ -85,16 +84,46 @@
                     <label for="floatingInput">Estado</label>
                 </div>
                 <button class="w-100 btn btn-lg btn-primary" type="submit">Salvar</button>
-                <hr class="my-4">
+                <hr>
                 <div class="forgot">
-                <a href="forgotpass.html">Esqueci minha senha</a>
+                    <a href="forgotpass.html">Esqueci minha senha</a>
                 </div>
-              </form>
+            </form>
         </div>
+        <br>
     </main>
 
     <footer>
-        <h2>ESPERANDO O FOOTER</h2>
+        <section class="">
+            <footer class="text-center text-white" style="background-color: #0a4275;">
+                <div class="container p-4 pb-0">
+                    <section class="">
+                        <p class="d-flex justify-content-center align-items-center">
+                            <span class="me-3">Crie sua conta grátis!</span>
+                            <button type="button" class="btn btn-outline-light btn-rounded">
+                                Criar
+                            </button>
+                        </p>
+                    </section>
+                </div>
+                <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                    © 2022 Copyright: Squad 5 - Programadores Cariocas
+                </div>
+            </footer>
+        </section>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="/script.js"></script>
 </body>
+
 </html>
+
+<!-- https://mdbootstrap.com/docs/standard/navigation/footer/ 
+
+
+
+
+
+
+-->

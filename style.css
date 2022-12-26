@@ -5,3 +5,16 @@
 .forgot{
     text-align: center;
 }
+
+.fundo{
+    background-color: #0a4275;
+}
+
+.nav-link{
+    color: #ffff;
+    background-color: #0a4275;
+}
+
+.nav-link:hover{
+    color: #ffff;
+}
