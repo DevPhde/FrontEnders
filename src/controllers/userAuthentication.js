@@ -1,18 +1,11 @@
-import users from "../models/User.js"
-import {passwordDecryptography} from "../authentication/passwordProtection.js"
-import ResponseAuthentication from "../models/ResponseAuthentication.js"
+import getUser from "./getUser.js";
+import {verifyPasswordAuthenticity} from "../authentication/passwordProtection.js"
+import response from "./response.js";
 
 async function authUser(user) {
-    const foundUser  = await users.findOne ({"email" : user.email})
-    const validUser = foundUser != null ? await passwordDecryptography(user['password'], foundUser['password']) : false;
-    return validUser ? responseValidation(validUser) : responseValidation(validUser)
+    const foundUser = await getUser("email", user['email']);
+    const validUser = foundUser != null ? await verifyPasswordAuthenticity(user['password'], foundUser['password']) : false;
+    return validUser ? response(validUser, undefined) : response(validUser, "Email ou senha inválido.")
 }
-
-function responseValidation(userResponse) {
-    const message = userResponse ? undefined : "Email ou senha inválido.";
-    const response = new ResponseAuthentication(userResponse, message)
-    return response
-}
-
 
 export default authUser
