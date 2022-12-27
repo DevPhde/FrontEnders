@@ -1,8 +1,8 @@
-class ResponseRegister {
+class ResponseJson {
     constructor(result, message){
        this.result = result;
        this.message = message;
     }
  }
 
- export default ResponseRegister
+ export default ResponseJson
