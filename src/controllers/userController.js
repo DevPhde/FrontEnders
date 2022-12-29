@@ -1,7 +1,7 @@
 import users from "../models/User.js"
-import registerValidation from "./userDatabaseCheck.js"
+import registerValidation from "./register/userDatabaseCheck.js"
 import {passwordCryptography} from "../authentication/passwordProtection.js"
-import authUser from "./userAuthentication.js"
+import authUser from "./userAuthentication/userAuthentication.js"
 
 
 class UserController {
