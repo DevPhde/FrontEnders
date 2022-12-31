@@ -8,7 +8,8 @@ const userSchema = new mongoose.Schema(
         rg: {type: String, required: true},
         password: {type: String, required: true},
         cep: {type: String, required: true},
-        token: {type: Number}
+        token: {type: Number},
+        hash: {type: String}
     }
 );
 
