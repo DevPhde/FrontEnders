@@ -18,9 +18,6 @@ class User {
 async function connect() {
     const conexao = await fetch('https://authentication-api-pvz6.onrender.com/v1/login', {
         method: "POST",
-        headers: {
-            "content-type": "application/json"
-        },
         body: JSON.stringify(User.createUser())
     });
     const conexaoConvertida = await conexao.json();
