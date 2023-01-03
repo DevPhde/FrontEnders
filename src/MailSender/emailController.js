@@ -13,16 +13,13 @@ class Mailer {
     }
     static async catchInformationsToSendMail(hash) {
         let informationToSendMail = await getUser("hash", hash);
-        console.log(informationToSendMail)
         informationToSendMail = new Mailer(informationToSendMail['_id'], informationToSendMail['fullName'], informationToSendMail['email'], informationToSendMail['token']);
-        console.log(informationToSendMail)
         return tokenConfig(informationToSendMail, sendMail)
     }
 }
 
 async function tokenConfig(databaseUser, sendMail) {
     const newToken = await tokenGenerator();
-    console.log(newToken)
     if (newToken) {
         const result = await users.updateOne({ _id: databaseUser._id }, { $set: { token: newToken } })
         if (result.acknowledged == true) {
