@@ -8,26 +8,6 @@
     background-color: #0a4275;
 }
 
-/* FORGOTPASS.HTML */
-
-
-/* #name, #email, #password, #check, #identidy, #zip, #send, #street, #district, #city, #uf{
-    margin-top: 1rem;
+.errors {
+    color: red;
 }
-
-.forgot{
-    text-align: center;
-}
-
-.fundo{
-    background-color: #0a4275;
-}
-
-.nav-link{
-    color: #ffff;
-    background-color: #0a4275;
-}
-
-.nav-link:hover{
-    color: #ffff;
-} */

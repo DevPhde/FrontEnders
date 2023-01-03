@@ -13,7 +13,7 @@
     integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
   <title>LOGIN PAGE</title>
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-  <script src="./script/index.js" async defer></script>
+  
 </head>
 
 <body>
@@ -39,7 +39,7 @@
           <p class="col-lg-10 fs-4">Escreva seu email e a sua senha para acessar a sua conta.</p>
         </div>
         <div class="col-md-10 mx-auto col-lg-5">
-          <form class="p-4 p-md-5 border rounded-3 bg-light">
+          <form class="p-4 p-md-5 border rounded-3 bg-light" data-form>
             <div class="form-floating mb-3">
               <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
               <label for="floatingInput">Email</label>
@@ -52,8 +52,8 @@
               <div class="g-recaptcha" data-sitekey="6LcQqcsjAAAAAMEIeMP4DzeiO14o30VRNSpB14G8"></div>
               <br />
             </section>
-            <button class="w-100 btn btn-lg btn-primary" type="submit"
-              onclick="return validateCaptcha()">Acessar</button>
+            <button class="w-100 btn btn-lg btn-primary" type="submit">Acessar</button> <!--onclick="return validateCaptcha()"-->
+            <p id="userError" class="errors"></p>
             <hr class="my-4">
             <div class="forgot">
               <a href="forgotpass.html">Esqueci minha senha</a>
@@ -94,6 +94,7 @@
       }
     }
   </script>
+  <script src="./script/index.js" async defer></script>
 </body>
 
 </html>
