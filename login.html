@@ -12,6 +12,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
   <title>LOGIN PAGE</title>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
 <body>
@@ -46,6 +47,11 @@
               <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
               <label for="floatingPassword">Senha</label>
             </div>
+            <section> <!--CAPTCHA-->
+              <div class="g-recaptcha" data-sitekey="6LcQqcsjAAAAAMEIeMP4DzeiO14o30VRNSpB14G8"></div>
+              <br />
+              <input type="submit" value="Submit">
+            </section>
             <button class="w-100 btn btn-lg btn-primary" type="submit">Acessar</button>
             <hr class="my-4">
             <div class="forgot">
