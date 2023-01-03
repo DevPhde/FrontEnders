@@ -2,7 +2,7 @@
 <html lang="pt-br">
 
 <head>
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="./css/style.css">
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -49,7 +49,7 @@
               <label for="floatingPassword">Senha</label>
             </div>
             <section> <!--CAPTCHA-->
-              <!-- <div class="g-recaptcha" data-sitekey="6LcQqcsjAAAAAMEIeMP4DzeiO14o30VRNSpB14G8"></div> -->
+              <div class="g-recaptcha" data-sitekey="6LcQqcsjAAAAAMEIeMP4DzeiO14o30VRNSpB14G8"></div>
               <br />
             </section>
             <button class="w-100 btn btn-lg btn-primary" type="submit">Acessar</button> <!--onclick="return validateCaptcha()"-->
@@ -87,12 +87,12 @@
     integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
     crossorigin="anonymous"></script>
   <script>
-    // function validateCaptcha() {
-    //   if (grecaptcha.getResponse() == "") {
-    //     alert("Captcha Obrigatório")
-    //     return false
-    //   }
-    // }
+    function validateCaptcha() {
+      if (grecaptcha.getResponse() == "") {
+        alert("Captcha Obrigatório")
+        return false
+      }
+    }
   </script>
   <script src="./script/index.js" async defer></script>
 </body>

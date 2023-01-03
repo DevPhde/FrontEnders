@@ -30,7 +30,6 @@ async function connect() {
     } else {
         userError.innerHTML = conexaoConvertida.message
     }
-
     return conexaoConvertida;
 }
 
