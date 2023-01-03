@@ -36,9 +36,7 @@ async function tokenConfig(databaseUser, sendMail) {
     }
 }
 
-async function removeToken(userId, actualToken) {
-    console.log(userId)
-    console.log("token reset")
+async function removeToken(userId) {
     await users.updateOne({ _id: userId }, { $unset: { token: "" } })
 }
 

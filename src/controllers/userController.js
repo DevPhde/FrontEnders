@@ -6,6 +6,7 @@ import userPasswordRecovery from "./passwordRecovery/passwordRecovery.js"
 import Mailer from "../MailSender/emailController.js"
 import tokenVerify from "../controllers/passwordRecovery/tokenVerify.js"
 import checkNewPassword from "./passwordRecovery/newPassword.js"
+import { deleteHash } from "../authentication/hashConfiguration.js"
 
 class UserController {
     static UserRegister = async (req, res) => {
@@ -16,7 +17,7 @@ class UserController {
             res.status(406).send(JSON.stringify(result))
         } else {
             user.save((err) => {
-                err ? res.status(500).send({ message: "Ocorreu um erro, tente novamente maisa tarde." }) : res.status(200).send(JSON.stringify(result))
+                err ? res.status(500).send({ message: "Ocorreu um erro, tente novamente mais tarde." }) : res.status(200).send(JSON.stringify(result))
             })
         }
     }
@@ -58,6 +59,9 @@ class UserController {
     static NewPassword = async (req, res) => {
         let newPass = req.body; // hash + password
         let password = await checkNewPassword(newPass)
+        if(password.result){
+            deleteHash(newPass.hash)
+        }
         password.result ? res.status(200).send(JSON.stringify(password)) : res.status(401).send(JSON.stringify(password))
     }
 }
