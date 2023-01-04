@@ -13,7 +13,7 @@
     integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
   <title>LOGIN PAGE</title>
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-  
+
 </head>
 
 <body>
@@ -52,7 +52,8 @@
               <div class="g-recaptcha" data-sitekey="6LcQqcsjAAAAAMEIeMP4DzeiO14o30VRNSpB14G8"></div>
               <br />
             </section>
-            <button class="w-100 btn btn-lg btn-primary" type="submit">Acessar</button> <!--onclick="return validateCaptcha()"-->
+            <button class="w-100 btn btn-lg btn-primary" type="submit" onclick="return validateCaptcha()">Acessar</button>
+            
             <p id="userError" class="errors"></p>
             <hr class="my-4">
             <div class="forgot">
@@ -91,8 +92,8 @@
       if (grecaptcha.getResponse() == "") {
         alert("Captcha Obrigatório")
         return false
-      }
     }
+  }
   </script>
   <script src="./script/index.js" async defer></script>
 </body>
