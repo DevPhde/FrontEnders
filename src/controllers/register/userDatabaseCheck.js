@@ -3,7 +3,7 @@ import getUser from "../getUser.js"
 
 async function registerValidation(user) {
    const foundEmail = await getUser("email", user['email']);
-   const foundRG = await getUser("rg", user['rg']); 
+   const foundRG = await getUser("rg", user['rg']);
    return isValidUser(foundRG, foundEmail)
 }
 
