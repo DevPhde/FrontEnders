@@ -9,28 +9,26 @@ class User {
         this.email = email;
         this.password = password;
     }
-    static createUser() {
+    static loginUser() {
         const user = new User(email.value, password.value)
         return user
     }
 }
 
 async function connect() {
-    const conexao = await fetch('https://authentication-api-pvz6.onrender.com/v1/login', {
+    const connection = await fetch('https://authentication-api-pvz6.onrender.com/v1/login', {
         method: "POST",
         headers: {
             "content-type": "application/json",
             "Permissions-Policy": "interest-cohort=()"
         },
-        body: JSON.stringify(User.createUser())
+        body: JSON.stringify(User.loginUser())
     });
-    const conexaoConvertida = await conexao.json();
-    if (conexaoConvertida.result) {
-        console.log("liberado")
-    } else {
+    const convertedConnection = await connection.json();
+    if (!convertedConnection.result){
         userError.innerHTML = conexaoConvertida.message
     }
-    return conexaoConvertida;
+    return
 }
 
 form.addEventListener('submit', (e) => {
