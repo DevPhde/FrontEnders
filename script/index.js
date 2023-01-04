@@ -26,7 +26,7 @@ async function connect() {
     });
     const convertedConnection = await connection.json();
     if (!convertedConnection.result){
-        userError.innerHTML = conexaoConvertida.message
+        userError.innerHTML = convertedConnection.message
     }
     return
 }
