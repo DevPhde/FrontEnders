@@ -11,5 +11,4 @@ async function verifyPasswordAuthenticity(reqPassword, passwordDB){
     return (bcrypt.hashSync(reqPassword, salt) === passwordDB) === true ? true : false
 }
 
-
 export {passwordCryptography, verifyPasswordAuthenticity};
