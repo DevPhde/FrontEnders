@@ -6,7 +6,8 @@ import userPasswordRecovery from "./passwordRecovery/passwordRecovery.js"
 import Mailer from "../MailSender/emailController.js"
 import tokenVerify from "../controllers/passwordRecovery/tokenVerify.js"
 import checkNewPassword from "./passwordRecovery/newPassword.js"
-import { deleteHash } from "../authentication/hashConfiguration.js"
+import { deleteHash } from "../authentication/JWT.js"
+import {infosToDashboard} from "./dashboard/dashboard.js"
 
 class UserController {
     static UserRegister = async (req, res) => {
@@ -24,8 +25,12 @@ class UserController {
     static UserAuthentication = async (req, res) => {
         let user = new users(req.body) // email + password
         let validUser = await authUser(user);
+        console.log(validUser)
         validUser.result == true ? res.status(200).send(JSON.stringify(validUser)) : res.status(401).send(JSON.stringify(validUser));
     }
+    // static Dashboard = async (req, res) => {        
+    //     res.status(200).redirect('/dashboard')
+    // }
     static PasswordRecovery = async (req, res) => {
         let user = req.body; // email
         let validAccount = await userPasswordRecovery(user);
@@ -64,7 +69,11 @@ class UserController {
         }
         password.result ? res.status(200).send(JSON.stringify(password)) : res.status(401).send(JSON.stringify(password))
     }
+    static Dashboard = async (req, res) => {
+        let hash = req.get('Hash')
+        let userInfos = await infosToDashboard(hash)
+        res.send(userInfos).redirect('/dashboard')
+    }
 }
-
 
 export default UserController;

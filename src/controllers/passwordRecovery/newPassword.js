@@ -6,7 +6,8 @@ import { passwordCryptography } from "../../authentication/passwordProtection.js
 
 async function checkNewPassword(userParam) {
     const user = await getUser("hash", userParam['hash'])
-    const matchPassword = verifyPasswordAuthenticity(userParam.password, user.password)
+    const matchPassword = await verifyPasswordAuthenticity(userParam.password, user.password)
+    console.log(matchPassword)
     return !matchPassword ? await linkNewPassword(userParam.password, user) : ResponseJson.response(false, "Senha nova não pode ser igual a senha já cadastrada.")
 }
 
