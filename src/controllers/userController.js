@@ -74,6 +74,12 @@ class UserController {
         let userInfos = await infosToDashboard(hash)
         res.send(userInfos).redirect('/dashboard')
     }
+
+    static Logout = async (req, res) => {
+        let hash = req.get('Hash')
+        deleteHash(hash)
+        res.redirect('/')
+    }
 }
 
 export default UserController;
