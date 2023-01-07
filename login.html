@@ -13,7 +13,7 @@
     integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
   <title>LOGIN PAGE</title>
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-
+ 
 </head>
 
 <body>
@@ -35,7 +35,7 @@
     <div class="container col-xl-10 col-xxl-8 px-4 py-5">
       <div class="row align-items-center g-lg-5 py-5">
         <div class="col-lg-7 text-center text-lg-start">
-          <!-- <img src="./img/trading bot.webp" class="bg" alt="img bot"> -->
+          <img src="./img/trading bot.webp" class="bg" alt="img bot">
         </div>
         <div class="mx-auto col-lg-5">
           <form class="p-4 p-md-5 border rounded-3 bg-light" data-form>
@@ -53,9 +53,8 @@
               <div class="g-recaptcha" data-sitekey="6LcQqcsjAAAAAMEIeMP4DzeiO14o30VRNSpB14G8"></div>
               <br />
             </section>
-            <button id="button_login" class="is-loading w-100 btn btn-lg btn-primary justify-content-center"
+            <button onclick="return validateCaptcha()" id="button_login" class="is-loading w-100 btn btn-lg btn-primary justify-content-center"
               type="submit">Acessar</button>
-              <!-- onclick="return validateCaptcha()"  // colocar de volta no botao-->
             <p id="userError" class="errors text-center text-danger"></p>
             <hr class="my-4">
             <div class="text-center">
@@ -84,15 +83,14 @@
     integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
     crossorigin="anonymous"></script>
   <script>
-    // function validateCaptcha() {
-    //   if (grecaptcha.getResponse() == "") {
-    //     alert("Captcha Obrigatório")
-    //     return false
-    //   }
-    // }
+    function validateCaptcha() {
+      if (grecaptcha.getResponse() == "") {
+        alert("Captcha Obrigatório")
+        return false
+      }
+    }
   </script>
-  <script src="./script/dashboard.js" type="module"></script>
-  <script src="./script/index.js" type="module"></script>
+  <script src="./script/login.js" type="module"></script>
 </body>
 
 </html>
