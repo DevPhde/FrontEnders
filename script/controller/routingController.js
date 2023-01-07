@@ -11,7 +11,7 @@ export class PathController {
         } else {
             if (response.message) {
                 sessionStorage.setItem("Hash", response.message)
-                Routes.Dashboard()
+                Routes.DashboardRedirect()
             }
             else {
                 alert("Erro inesperado, tente novamente mais tarde.")
@@ -23,7 +23,6 @@ export class PathController {
     static async DashboardController() {
         const connection = await Connection.DashboardConnection();
         const response = await connection.json()
-        console.log(connection)
-        return connection.status == 301 ? true : false
+        return connection.status == 401 ? false : connection.status == 301 ? true : false;
     }
 }

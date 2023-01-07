@@ -5,15 +5,23 @@ export class Routes {
         window.location.replace("https://devphde.github.io/FrontEnders/")
     }
 
-    static async Dashboard() {
-        const response = await PathController.DashboardController()
-        console.log(response)
-        if (response) {
-            console.log('sim')
+    static Login() {
+        window.location.replace("https://devphde.github.io/FrontEnders/login.html")
+    }
+    static async DashboardRedirect() {
+        const redirect = await PathController.DashboardController()
+        if (redirect)  {
+            this.Dashboard()
             window.location.replace("https://devphde.github.io/FrontEnders/dashboard.html")
         } else {
-            // this.Index()
+            this.Login()
         }
     }
 
+    static async Dashboard() {
+        const redirect = await PathController.DashboardController()
+        if (!redirect) {
+            this.Login()
+        }
+    }
 }
