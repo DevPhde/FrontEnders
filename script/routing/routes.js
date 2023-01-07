@@ -7,10 +7,12 @@ export class Routes {
 
     static async Dashboard() {
         const response = await PathController.DashboardController()
-        if (response.status) {
+        console.log(response)
+        if (response) {
+            console.log('sim')
             window.location.replace("https://devphde.github.io/FrontEnders/dashboard.html")
         } else {
-            this.Index()
+            // this.Index()
         }
     }
 
