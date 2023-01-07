@@ -1,10 +1,13 @@
+import { dashboardView } from "./dashboard.js"
+import { Connection } from "./Connection.js"
+
 let email = document.getElementById("floatingInput")
 let password = document.getElementById("floatingPassword")
 const form = document.querySelector("[data-form]")
 const userError = document.getElementById("userError")
-const button = document.getElementById("button_login")
 
-class User {
+
+export class User {
     constructor(email, password) {
         this.email = email;
         this.password = password;
@@ -16,21 +19,14 @@ class User {
 }
 
 async function connect() {
-    const connection = await fetch('https://authentication-api-pvz6.onrender.com/v1/login', {
-        method: "POST",
-        headers: {
-            "content-type": "application/json",
-            "Permissions-Policy": "interest-cohort=()"
-        },
-        body: JSON.stringify(User.loginUser())
-    });
-    const convertedConnection = await connection.json();
-    if (!convertedConnection.result){
-        userError.innerHTML = convertedConnection.message
+    const connection = await Connection.LoginAuth()
+    const response = await connection.json();
+    if (!response.result){
+        userError.innerHTML = response.message
     } else {
-        if(convertedConnection.message){
-        sessionStorage.setItem("hash", convertedConnection.message)
-        window.location.replace("https://devphde.github.io/FrontEnders/dashboard")
+        if(response.message){
+        sessionStorage.setItem("Hash", response.message)
+        dashboardView(response.message)
         }
         else {
             alert("Erro inesperado, tente novamente mais tarde.")
@@ -42,5 +38,4 @@ async function connect() {
 form.addEventListener('submit', (e) => {
     e.preventDefault()
     connect()
-
 })
