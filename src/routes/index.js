@@ -4,7 +4,7 @@ import cors from "cors";
 
 const routes = (app) => {
     app.route('/').get((req, res) => {
-        res.status(200).redirect('/home')
+        res.status(200)
     })
     
     app.use(

@@ -1,5 +1,4 @@
 import getUser from "../controllers/getUser.js";
-import jwt from "jsonwebtoken";
 import dotenv from "dotenv";
 dotenv.config();
 
@@ -9,6 +8,6 @@ export async function hashAuthentication(req, res, next) {
     if (validHash) {
         next()
     } else {
-        res.redirect('/')
+        res.redirect('/login')
     }
 }
