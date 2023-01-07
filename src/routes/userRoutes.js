@@ -1,6 +1,6 @@
 import express from "express";
 import UserController from "../controllers/userController.js";
-import {hashAuthentication} from "../Middleware/hashAuth.js"
+import { hashAuthentication } from "../Middleware/hashAuth.js"
 
 const router = express.Router();
 

@@ -9,7 +9,7 @@ const routes = (app) => {
     
     app.use(
         express.json(),
-        cors(),
+        cors('Access-Control-Allow-Origin: *'),
         router
     )
 }

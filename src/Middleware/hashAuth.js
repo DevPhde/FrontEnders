@@ -8,6 +8,6 @@ export async function hashAuthentication(req, res, next) {
     if (validHash) {
         next()
     } else {
-        res.send(JSON.stringify('Login'))
+        res.status(401).send(JSON.stringify('INVALID JWT'))
     }
 }
