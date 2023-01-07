@@ -8,6 +8,6 @@ export async function hashAuthentication(req, res, next) {
     if (validHash) {
         next()
     } else {
-        res.redirect('/login')
+        res.send(JSON.stringify('Login'))
     }
 }

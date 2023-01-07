@@ -25,12 +25,8 @@ class UserController {
     static UserAuthentication = async (req, res) => {
         let user = new users(req.body) // email + password
         let validUser = await authUser(user);
-        console.log(validUser)
         validUser.result == true ? res.status(200).send(JSON.stringify(validUser)) : res.status(401).send(JSON.stringify(validUser));
     }
-    // static Dashboard = async (req, res) => {        
-    //     res.status(200).redirect('/dashboard')
-    // }
     static PasswordRecovery = async (req, res) => {
         let user = req.body; // email
         let validAccount = await userPasswordRecovery(user);
@@ -72,13 +68,13 @@ class UserController {
     static Dashboard = async (req, res) => {
         let hash = req.get('Hash')
         let userInfos = await infosToDashboard(hash)
-        res.send(userInfos).redirect('/dashboard')
+        res.status(301).send(JSON.stringify(userInfos))
     }
 
     static Logout = async (req, res) => {
         let hash = req.get('Hash')
         deleteHash(hash)
-        res.redirect('/')
+        res.send(JSON.stringify('Logout'))
     }
 }
 
