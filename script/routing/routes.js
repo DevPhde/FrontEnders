@@ -38,6 +38,10 @@ export class Routes {
         return await PathController.TokenResend()
     }
 
+    static async NewPassword() {
+        return await PathController.NewPassword()
+    }
+
     static async Logout(dashboard){
         const redirect = await PathController.Logout()
         if (redirect && dashboard){

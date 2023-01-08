@@ -1,6 +1,7 @@
 let email = document.getElementById("email_input")
 let password = document.getElementById("floatingPassword")
 let token = document.getElementById("token_input")
+let newPassword = document.getElementById("newPassword")
 
 export class ReponseToApi {    
     static loginUser() {
@@ -18,6 +19,12 @@ export class ReponseToApi {
         return {
             "hash": sessionStorage.getItem('Hash'),
             "token": token.value
+        }
+    }
+    static NewPassword(){
+        return {
+            "hash": sessionStorage.getItem('Hash'),
+            "password": newPassword.value
         }
     }
 }

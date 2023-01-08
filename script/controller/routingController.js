@@ -3,6 +3,13 @@ import { Routes } from "../routing/routes.js";
 
 const userError = document.getElementById("userError")
 
+const emailError = document.getElementById("emailError")
+const tokenError = document.getElementById("tokenError")
+const PasswordError = document.getElementById("PasswordError")
+
+const newPassword = document.getElementById("newPassword")
+const newPassword_conffirm = document.getElementById("newPassword_conffirm")
+
 export class PathController {
 
     static async LoginController() {
@@ -24,7 +31,7 @@ export class PathController {
 
     static async DashboardController() {
         const connection = await Connection.DashboardConnection();
-        const response = await connection.json() // use response in dashboard view
+        const response = await connection.json() // usar response pro dashboard view
         return connection.status == 401 ? false : connection.status == 301 ? true : false;
     }
 
@@ -33,10 +40,11 @@ export class PathController {
         const response = await connection.json()
 
         if (connection.status == 500) {
-            userError.innerHTML = response.message
+            emailError.innerHTML = response.message
+            return false
         }
         if (connection.status == 401) {
-            userError.innerHTML = response.message
+            emailError.innerHTML = response.message
             return false
         } else {
             sessionStorage.setItem("Hash", response.message)
@@ -46,19 +54,14 @@ export class PathController {
     static async TokenVerify() {
         const connection = await Connection.TokenVerify()
         const response = await connection.json()
-        console.log(connection)
-        console.log(response)
         if (connection.status != 200) {
-            if (connection.message == 'INVALID JWT') {
-                console.log('sei de mais nada')
+            if (response == 'INVALID JWT') {
                 Routes.RecoveryView()
             } else {
-                console.log('caiu no else')
-                userError.innerHTML = response.message
+                tokenError.innerHTML = response.message
                 return false
             }
         } else {
-            console.log("acho que passou")
             return true
         }
     }
@@ -66,18 +69,37 @@ export class PathController {
     static async TokenResend() {
         const connection = await Connection.TokenResend()
         const response = await connection.json()
-        console.log(connection)
-        console.log(response)
+        if (response == 'INVALID JWT'){
+            Routes.RecoveryView()
+        }
         if (connection.status == 200) {
             return true
         } else {
             return false
         }
     }
+
+    static async NewPassword() {
+        console.log(newPassword.value, newPassword_conffirm.value)
+        if (newPassword.value != newPassword_conffirm.value){
+            PasswordError.innerHTML = "Senhas não conferem"
+            return false
+        }
+        const connection = await Connection.NewPassword()
+        const response = await connection.json()
+        if (response == 'INVALID JWT'){
+            Routes.RecoveryView()
+        }
+        if (connection.status == 200) {
+            return true
+        } else {
+            PasswordError.innerHTML = response.message
+            return false
+        }
+    }
     
     static async Logout() {
         const connection = await Connection.Logout();
-        const response = await connection.json();
         if (connection.status == 200) {
             return true
         }

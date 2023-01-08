@@ -22,8 +22,10 @@ function showTab(n) {
   }
   //... and run a function that will display the correct step indicator:
   fixStepIndicator(n)
-  console.log(n)
 }
+const newPassword = document.getElementById("PasswordError")
+const newPassword_conffirm = document.getElementById("newPassword_conffirm")
+
 window.nextPrev = async function nextPrev(n) {
   // This function will figure out which tab to display
   let x = document.getElementsByClassName("step");
@@ -38,6 +40,10 @@ window.nextPrev = async function nextPrev(n) {
   if (currentTab == 1) {
     const result = await Routes.VerifyToken()
     if (!result) return false
+  }
+  if (currentTab == 2) {
+    const result = await Routes.NewPassword()
+    if(!result) return false
   }
   // if ()
   // Hide the current tab:
@@ -91,18 +97,22 @@ function fixStepIndicator(n) {
   x[n].className += " active";
 }
 
-
+let ResendCount = 3;
 window.tokenResend = function tokenResend() {
   const resendToken = document.getElementById("resend_token")
-  let count = 3;
-  if (count > 0){
-    Routes.TokenResend()
-    count--
+  if (ResendCount > 0){
+    ResendCount--
+    console.log(ResendCount)
+    Routes.TokenResend()  
   } else {
     resendToken.disabled = true
     alert('Limite máximo de reenvios atingido.')
   }
   
+}
+
+window.loginRedirect = function loginRedirect() {
+  Routes.Login()
 }
 
 window.cancelRecovery = function cancelRecovery() {

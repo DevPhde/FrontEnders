@@ -34,6 +34,7 @@ export class Connection {
             },
             body: JSON.stringify(ReponseToApi.PasswordRecovery())
         });
+        console.log(connection)
         return connection
     }
 
@@ -42,7 +43,8 @@ export class Connection {
             method: "POST",
             headers: {
                 "content-type": "application/json",
-                "Permissions-Policy": "interest-cohort=()"
+                "Permissions-Policy": "interest-cohort=()",
+                "Hash": sessionStorage.getItem('Hash')
             },
             body: JSON.stringify(ReponseToApi.Token())
         });
@@ -54,11 +56,25 @@ export class Connection {
             method: "POST",
             headers: {
                 "content-type": "application/json",
-                "Permissions-Policy": "interest-cohort=()"
+                "Permissions-Policy": "interest-cohort=()",
+                "Hash": sessionStorage.getItem('Hash')
             },
             body: JSON.stringify({"hash": sessionStorage.getItem('Hash')})
         });
-        console.log(ReponseToApi.Token())
+        return connection
+    }
+
+    static async NewPassword() {
+        console.log(ReponseToApi.NewPassword())
+        const connection = await fetch('https://authentication-api-pvz6.onrender.com/v1/new-password', {
+            method: "PUT",
+            headers: {
+                "content-type": "application/json",
+                "Permissions-Policy": "interest-cohort=()",
+                "Hash": sessionStorage.getItem('Hash')
+            },
+            body: JSON.stringify(ReponseToApi.NewPassword())
+        });
         return connection
     }
 
