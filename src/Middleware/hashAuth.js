@@ -4,10 +4,11 @@ dotenv.config();
 
 export async function hashAuthentication(req, res, next) {
     let hash = req.get('Hash')
-    let validHash = await getUser('hash', hash)
-    if (validHash) {
-        next()
-    } else {
+    if (hash == undefined) {
         res.status(401).send(JSON.stringify('INVALID JWT'))
+        return false
+    } else {
+        let validHash = await getUser('hash', hash)
+        validHash ? next() : res.status(401).send(JSON.stringify('INVALID JWT'))
     }
 }
