@@ -17,7 +17,6 @@ export class Routes {
             this.Login()
         }
     }
-
     static async Dashboard() {
         const redirect = await PathController.DashboardController()
         if (!redirect) {

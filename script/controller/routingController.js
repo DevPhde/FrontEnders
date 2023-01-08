@@ -3,6 +3,7 @@ import { Routes } from "../routing/routes.js";
 const userError = document.getElementById("userError")
 
 export class PathController {
+    
     static async LoginController() {
         const connection = await Connection.LoginAuth()
         const response = await connection.json();

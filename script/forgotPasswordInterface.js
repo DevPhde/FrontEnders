@@ -26,13 +26,12 @@ let currentTab = 0; // Current tab is set to be the first tab (0)
     // This function will figure out which tab to display
     let x = document.getElementsByClassName("step");
     // Exit the function if any field in the current tab is invalid:
-    if (n == 1 && !validateForm()) return false; // checa se os campos estão preenchidos
+    if (n == 1 && !validateForm()) return false;
     // Hide the current tab:
     x[currentTab].style.display = "none";
     // Increase or decrease the current tab by 1:
     currentTab = currentTab + n;
     // if you have reached the end of the form...
-    console.log(currentTab)
     if (currentTab == 3) {
         document.getElementsByClassName("stepIndicator")[currentTab].className += " finish";
         document.getElementById("cancelBtn").style.display = "none";
@@ -43,7 +42,7 @@ let currentTab = 0; // Current tab is set to be the first tab (0)
         
       // ... the form gets submitted:
 
-    //   document.getElementById("signUpForm").submit(); /////////// envia o formulario
+    //   document.getElementById("signUpForm").submit(); /////////// send form
       return false;
     }
     // Otherwise, display the correct tab:
