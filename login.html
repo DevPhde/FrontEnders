@@ -48,8 +48,8 @@
             <h5 class="text-center mb-4">Acessar</h5>
 
             <div class="form-floating mb-3">
-              <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-              <label for="floatingInput">Email</label>
+              <input type="email" class="form-control" id="email_input" placeholder="name@example.com">
+              <label for="email_input">Email</label>
             </div>
             <div class="form-floating mb-3">
               <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
@@ -94,7 +94,7 @@
     
   <script>
     function validateCaptcha() {
-      if (grecaptcha.getResponse() == "") {
+      if (!grecaptcha.getResponse() == "") {
         alert("Captcha Obrigatório")
         return false
       }

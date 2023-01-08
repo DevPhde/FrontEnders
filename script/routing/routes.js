@@ -8,6 +8,7 @@ export class Routes {
     static Login() {
         window.location.replace("https://devphde.github.io/FrontEnders/login.html")
     }
+
     static async DashboardRedirect() {
         const redirect = await PathController.DashboardController()
         if (redirect)  {
@@ -21,6 +22,17 @@ export class Routes {
         const redirect = await PathController.DashboardController()
         if (!redirect) {
             this.Login()
+        }
+    }
+    static async VerifyEmailToRecoveryPassword() {
+        const redirect = await PathController.EmailVerify()
+        return redirect
+    }
+
+    static async Logout(dashboard){
+        const redirect = await PathController.Logout()
+        if (redirect && dashboard){
+            this.Index()
         }
     }
 }

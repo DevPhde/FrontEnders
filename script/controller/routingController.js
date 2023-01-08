@@ -1,5 +1,6 @@
 import { Connection } from "../connection/Connection.js";
 import { Routes } from "../routing/routes.js";
+
 const userError = document.getElementById("userError")
 
 export class PathController {
@@ -23,7 +24,32 @@ export class PathController {
 
     static async DashboardController() {
         const connection = await Connection.DashboardConnection();
-        const response = await connection.json()
+        const response = await connection.json() // use response in dashboard view
         return connection.status == 401 ? false : connection.status == 301 ? true : false;
+    }
+
+    static async EmailVerify() {
+        const connection = await Connection.VerifyValidEmailToRecoveryPassword();
+        const response = await connection.json()
+        console.log(connection)
+        console.log(response)
+        if(connection.status == 500){
+            userError.innerHTML = response.message
+        }
+        if (connection.status == 401) {
+            userError.innerHTML = response.message
+            return false
+        } else {
+            sessionStorage.setItem("Hash", response.message)
+            return true
+        }
+            }
+
+    static async Logout(){
+        const connection = await Connection.Logout();
+        const response = await connection.json();
+        if(connection.status == 200){
+            return true
+        }
     }
 }
