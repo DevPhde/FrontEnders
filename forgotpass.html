@@ -3,7 +3,6 @@
 
 <head>
 <script src="./script/forgotPasswordInterface.js" async defer type="module"></script>
-
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -66,10 +65,10 @@
       <p class="text-center mb-1">Foi enviado para o seu email um token de confirmação, o token é válido por
         10 minutos.</p>
       <div class="mb-3">
-        <input type="token" placeholder="Token" oninput="this.className = ''" name="email" maxlength="6">
+        <input type="token" placeholder="Token" oninput="this.className = ''" name="email" maxlength="6" id="token_input">
       </div>
       <div class="text-center">
-        <button type="button" class="btn btn-outline-success m-4 ">Reenviar Email</button>
+        <button onclick="tokenResend()" id="resend_token" type="button" class="btn btn-outline-success m-4 ">Reenviar Email</button>
         <p id="userError" class="errors text-center text-danger"></p>
       </div>
     </div>

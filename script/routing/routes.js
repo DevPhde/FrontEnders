@@ -8,6 +8,9 @@ export class Routes {
     static Login() {
         window.location.replace("https://devphde.github.io/FrontEnders/login.html")
     }
+    static RecoveryView() {
+        window.location.replace("https://devphde.github.io/FrontEnders/forgotpass.html")
+    }
 
     static async DashboardRedirect() {
         const redirect = await PathController.DashboardController()
@@ -25,8 +28,14 @@ export class Routes {
         }
     }
     static async VerifyEmailToRecoveryPassword() {
-        const redirect = await PathController.EmailVerify()
-        return redirect
+        return await PathController.EmailVerify()
+
+    }
+    static async VerifyToken(){
+        return await PathController.TokenVerify()
+    }
+    static async TokenResend(){
+        return await PathController.TokenResend()
     }
 
     static async Logout(dashboard){

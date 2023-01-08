@@ -28,15 +28,16 @@ window.nextPrev = async function nextPrev(n) {
   // This function will figure out which tab to display
   let x = document.getElementsByClassName("step");
   // Exit the function if any field in the current tab is invalid:
-  if (n == 1 && !validateForm()){
+  if (n == 1 && !validateForm()) {
     return false
   }
-  if (currentTab == 0){
+  if (currentTab == 0) {
     const result = await Routes.VerifyEmailToRecoveryPassword()
-    if (!result) return false  
+    if (!result) return false
   }
-  if (currentTab == 1){
-    console.log('token')
+  if (currentTab == 1) {
+    const result = await Routes.VerifyToken()
+    if (!result) return false
   }
   // if ()
   // Hide the current tab:
@@ -52,9 +53,6 @@ window.nextPrev = async function nextPrev(n) {
   }
   if (currentTab >= x.length) {
 
-    // ... the form gets submitted:
-
-    //   document.getElementById("signUpForm").submit(); /////////// send form
     return false;
   }
   // Otherwise, display the correct tab:
@@ -94,8 +92,17 @@ function fixStepIndicator(n) {
 }
 
 
-window.loginRedirect = function loginRedirect() {
-
+window.tokenResend = function tokenResend() {
+  const resendToken = document.getElementById("resend_token")
+  let count = 3;
+  if (count > 0){
+    Routes.TokenResend()
+    count--
+  } else {
+    resendToken.disabled = true
+    alert('Limite máximo de reenvios atingido.')
+  }
+  
 }
 
 window.cancelRecovery = function cancelRecovery() {
