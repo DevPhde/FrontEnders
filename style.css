@@ -6,6 +6,7 @@
     background-color: #0a4275;
 }
 
+
 .errors {
     color: red;
 }
@@ -25,5 +26,25 @@
     bottom: 0;
     left: 0;
     right: 0;
-    padding: 50px;
+    padding: 0;
+    
+
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+#sobre {
+    padding: 60px 60px;
+
+    
+}
+#textoSobre{
+    color: white;
+    padding: 0px 10px;
+}
+#textoSobre h2 {
+    margin-bottom: 10px;
 }
