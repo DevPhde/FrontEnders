@@ -74,7 +74,7 @@ class UserController {
     static Logout = async (req, res) => {
         let hash = req.get('Hash')
         deleteHash(hash)
-        res.send(JSON.stringify('Logout'))
+        res.status(200).send(JSON.stringify('Logout'))
     }
 }
 
