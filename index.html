@@ -2,7 +2,7 @@
 <html lang="pt-br">
 
 <head>
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="/css/Home.css">
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,21 +16,21 @@
 <body>
 
   <header class="mb-5">
-      <div class="dropdown">
-        <a class="btn btn-light dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-          Menu
-        </a>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="index.html">Início</a></li>
-          <li><a class="dropdown-item" href="#">Nossos Pacotes</a></li>
-          <li><a class="dropdown-item" href="#">Quem Somos</a></li>
-          <li><a class="dropdown-item" href="login.html">Acessar</a></li>
-          <li><a class="dropdown-item" href="form.html">Cadastro</a></li>
-        </ul>
-      </div>
+    <div class="dropdown">
+      <a class="btn btn-light dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Menu
+      </a>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="index.html">Início</a></li>
+        <li><a class="dropdown-item" href="#">Nossos Pacotes</a></li>
+        <li><a class="dropdown-item" href="#">Quem Somos</a></li>
+        <li><a class="dropdown-item" href="login.html">Acessar</a></li>
+        <li><a class="dropdown-item" href="form.html">Cadastro</a></li>
+      </ul>
+    </div>
   </header>
 
-  <div id="carouselExampleFade" class="carousel slide carousel-fade mb-5" data-bs-ride="carousel">
+  <div id="carouselExampleFade" class="carousel slide carousel-fade mb-5 container w-75" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active" data-bs-interval="2000">
         <img src="./img/pexels-kindel-media-8566473.jpg" style="max-height: 500px;" class="d-block w-100" alt="Robot">
@@ -40,10 +40,12 @@
         </div>
       </div>
       <div class="carousel-item" data-bs-interval="2000">
-        <img src="/img/pexels-pavel-danilyuk-8438918.jpg" alt="Robot vs human" style="max-height: 500px;" class="d-block w-100">
+        <img src="/img/pexels-pavel-danilyuk-8438918.jpg" alt="Robot vs human" style="max-height: 500px;"
+          class="d-block w-100">
       </div>
       <div class="carousel-item" data-bs-interval="2000">
-        <img src="/img/pexels-pixabay-373543.jpg" style="max-height: 500px;" class="d-block w-100" alt="finance expectation">
+        <img src="/img/pexels-pixabay-373543.jpg" style="max-height: 500px;" class="d-block w-100"
+          alt="finance expectation">
       </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
@@ -56,58 +58,69 @@
     </button>
   </div>
 
-  <section>
-    <div class="container col-xl-10 col-xxl-8 px-4 py-5">
-      <div class="row align-items-center g-lg-5 py-5">
-        <div id="destaqueSobre" class="col-lg-7 text-center text-lg-start">
-          <img src="./img/img-graficos_calculadora.jpg" alt="notebook" class="w-75">
-        </div id="textoSobre">
-        <div class="mx-auto col-lg-5 mb-5">
-          <h2 class="mb-2">Quem Somos</h2>
-          <p>Somos uma starup que disponibiliza uma ferramenta poderosa para plataformas de criptoativos no mercado de
-            financeiro. Trabalhamos com foco total no mercado de day trade com a melhor e maior criptomoeda do mundo que
-            é
-            o Bitcoin.
-            Bitcoin é uma moeda digital que permite pagamentos em transações online sem a necessidade de um
-            intermediário.
-            Baseada na rede blockchain, foi a pioneira entre as criptomoedas
-          </p>
-        </div>
-      </div>
-  </section>
-  
-  <section>
-    <div class="container col-xl-10 col-xxl-8 px-4 py-5">
-      <div class="row align-items-center g-lg-5 py-5">
-        <div id="destaqueSobre" class="col-lg-7 text-center text-lg-start">
-          <img src="./img/img-graficos_bitcoins.jpg" alt="bitcoins" class="w-75">
-        </div id="textoSobre">
-        <div class="mx-auto col-lg-5 mb-5">
-          <h2>Sobre o nosso produto</h2>
-          <p>Um robô trading diferente do que muitos pensam não é um robô de fato, devemos pensar mais com uma
-            ferramenta de automação para o mercado de criptomoedas que tem o intuito de facilitar o trabalho dos nossos
-            clientes investidores.
-            O robô investidor trader opera no mercado financeiro a partir de uma regra pré-determinada, que envia ordens
-            de compra e venda de uma ação. A proposta da automação é agilizar as movimentações na bolsa. Assim nossos
-            clientes investidores não precisam acompanhar diariamente as operações de day trade.</p>
+  <section class="px-5">
+    <div class="mx-5 p-3 mb-2 bg-info text-white div_quality">
+      <div class="container col-xl-10 col-xxl-8 px-4 py-5">
+        <div class="row align-items-center g-lg-5 py-5">
+          <div id="destaqueSobre" class="col-lg-7 text-lg-start">
+            <img src="./img/img-graficos_calculadora.jpg" alt="notebook" class="w-75 img_quality"
+              style="border-radius: 50px;">
+          </div id="textoSobre">
+          <div class="mx-auto col-lg-5 mb-5">
+            <h2 class="mb-2">Quem Somos</h2>
+            <p>Somos uma starup que disponibiliza uma ferramenta poderosa para plataformas de criptoativos no mercado de
+              financeiro. Trabalhamos com foco total no mercado de day trade com a melhor e maior criptomoeda do mundo
+              que
+              é
+              o Bitcoin.
+              Bitcoin é uma moeda digital que permite pagamentos em transações online sem a necessidade de um
+              intermediário.
+              Baseada na rede blockchain, foi a pioneira entre as criptomoedas
+            </p>
+          </div>
         </div>
       </div>
   </section>
 
-  <section>
-    <div class="container col-xl-10 col-xxl-8 px-4 py-5">
-      <div class="row align-items-center g-lg-5 py-5">
-        <div id="destaqueSobre" class="col-lg-7 text-center text-lg-start">
-          <img src="./img/robo bitcoin.jpg" alt="robo bit" class="w-75">
-        </div id="textoSobre">
-        <div class="mx-auto col-lg-5 mb-5">
-          <h2>Sobre o nosso produto</h2>
-          <p>Tenha (aqui entra o nome do nosso robô) todo mês ativando nossos planos personalizados para cada tipo de
-            cliente.
-            Aumente suas oportunidades de lucro com a ajuda do nosso smart robô.
-            Por que usar robôs de trading?
-            Os robôs trading são uma automatização de estratégias que utilizam análise técnica e estatística para buscar
-            operações de Day Trade.
+  <section class="px-5">
+    <div class="p-3 mb-2 mx-5 div_quality bg-dark-subtle text-emphasis-info">
+      <div class="container col-xl-10 col-xxl-8 px-4 py-5">
+        <div class="row align-items-center g-lg-5 py-5">
+          <div id="destaqueSobre" class="col-lg-7 text-center text-lg-start">
+            <img src="./img/img-graficos_bitcoins.jpg" alt="bitcoins" class="w-75" style="border-radius: 50px;">
+          </div id="textoSobre">
+          <div class="mx-auto col-lg-5 mb-5">
+            <h2>Sobre o nosso produto</h2>
+            <p>Um robô trading diferente do que muitos pensam não é um robô de fato, devemos pensar mais com uma
+              ferramenta de automação para o mercado de criptomoedas que tem o intuito de facilitar o trabalho dos
+              nossos
+              clientes investidores.
+              O robô investidor trader opera no mercado financeiro a partir de uma regra pré-determinada, que envia
+              ordens
+              de compra e venda de uma ação. A proposta da automação é agilizar as movimentações na bolsa. Assim nossos
+              clientes investidores não precisam acompanhar diariamente as operações de day trade.</p>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <section class="px-5 mb-5">
+    <div class="p-3 mb-2 mx-5 div_quality bg-info-subtle text-emphasis-info">
+      <div class="container col-xl-10 col-xxl-8 px-4 py-5">
+        <div class="row align-items-center g-lg-7 py-5">
+          <div id="destaqueSobre" class="col-lg-7 text-center text-lg-start">
+            <img src="./img/robo bitcoin.jpg" alt="robo bit" class="w-75" style="border-radius: 50px;">
+          </div id="textoSobre">
+          <div class="mx-auto col-lg-5 mb-5">
+            <h2>Sobre o nosso produto</h2>
+            <p>Tenha (aqui entra o nome do nosso robô) todo mês ativando nossos planos personalizados para cada tipo de
+              cliente.
+              Aumente suas oportunidades de lucro com a ajuda do nosso smart robô.
+              Por que usar robôs de trading?
+              Os robôs trading são uma automatização de estratégias que utilizam análise técnica e estatística para
+              buscar
+              operações de Day Trade.
+          </div>
         </div>
       </div>
   </section>
