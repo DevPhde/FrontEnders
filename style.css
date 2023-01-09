@@ -33,3 +33,7 @@
 .media-content{
     height: 75px;
 }
+
+.dropdown-item{
+    color: white;
+}
