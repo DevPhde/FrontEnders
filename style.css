@@ -24,3 +24,12 @@
     flex-direction: column;
     align-items: center;
 }
+
+.us{
+    border-style: outset;
+    border-color: #0a4275;
+}
+
+.media-content{
+    height: 75px;
+}
