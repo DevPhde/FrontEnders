@@ -1,50 +1,11 @@
-.forgot {
-    text-align: center;
-}
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans+Semi+Condensed&display=swap');
 
-.background_header {
-    background-color: #0a4275;
+.font {
+    font-family: 'Sofia Sans Semi Condensed', sans-serif;
 }
-
-
-.errors {
-    color: red;
-}
-
-.footer_quality {
-    margin-top: 200px;
-}
-.carousel-item {
+/* .carousel-item {
     height: 32rem;
     background: #777;
     color: white;
     position:relative;
-}
-
-.container {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 0;
-    
-
-}
-
-.flex {
-    display: flex;
-    justify-content: space-between;
-}
-
-#sobre {
-    padding: 60px 60px;
-
-    
-}
-#textoSobre{
-    color: white;
-    padding: 0px 10px;
-}
-#textoSobre h2 {
-    margin-bottom: 10px;
-}
+} */
