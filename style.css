@@ -18,3 +18,7 @@
 .nav-link:hover{
     color: #ffff;
 }
+
+.dropdown-item{
+    color: white;
+}
