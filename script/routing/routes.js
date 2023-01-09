@@ -6,9 +6,11 @@ export class Routes {
     }
 
     static Login() {
+        sessionStorage.clear()
         window.location.replace("https://devphde.github.io/FrontEnders/login.html")
     }
     static RecoveryView() {
+        sessionStorage.clear()
         window.location.replace("https://devphde.github.io/FrontEnders/forgotpass.html")
     }
 

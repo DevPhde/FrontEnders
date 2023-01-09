@@ -94,7 +94,7 @@
     
   <script>
     function validateCaptcha() {
-      if (grecaptcha.getResponse() == "") {
+      if (!grecaptcha.getResponse() == "") {
         alert("Captcha Obrigatório")
         return false
       }

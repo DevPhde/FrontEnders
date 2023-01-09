@@ -111,6 +111,7 @@ window.tokenResend = function tokenResend() {
 }
 
 window.loginRedirect = function loginRedirect() {
+  sessionStorage.clear()
   Routes.Login()
 }
 
