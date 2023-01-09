@@ -9,27 +9,36 @@ export class Routes {
         sessionStorage.clear()
         window.location.replace("https://devphde.github.io/FrontEnders/login.html")
     }
+
     static RecoveryView() {
         sessionStorage.clear()
         window.location.replace("https://devphde.github.io/FrontEnders/forgotpass.html")
     }
 
+    static async LoginAuth() {
+        const redirect = await PathController.LoginController()
+        if (redirect) {
+            Routes.DashboardRedirect()
+        } else {
+            return false
+        }
+    }
+
     static async DashboardRedirect() {
         const redirect = await PathController.DashboardController()
         if (redirect)  {
-            this.Dashboard()
+            // this.Dashboard(commingLogin)
             window.location.replace("https://devphde.github.io/FrontEnders/dashboard.html")
         } else {
             this.Login()
         }
     }
-    static async Dashboard(login) {
+    static async Dashboard() {
         const redirect = await PathController.DashboardController()
-        if(login){
-            if(redirect) this.Login()
-        }
+        // if(commingLogin){
+        //     if(redirect) window.location.replace("https://devphde.github.io/FrontEnders/dashboard.html")
+        // }
         if (!redirect) this.Login()
-
     }
     static async VerifyEmailToRecoveryPassword() {
         return await PathController.EmailVerify()

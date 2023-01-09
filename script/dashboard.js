@@ -1,2 +1,2 @@
 import { Routes } from "./routing/routes.js"
-Routes.Dashboard()
+Routes.Dashboard(false)

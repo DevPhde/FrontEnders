@@ -17,16 +17,17 @@ export class PathController {
         const response = await connection.json();
         if (!response.result) {
             userError.innerHTML = response.message
+            return false
         } else {
             if (response.message) {
                 sessionStorage.setItem("Hash", response.message)
-                Routes.DashboardRedirect()
+                return true
             }
             else {
                 alert("Erro inesperado, tente novamente mais tarde.")
+                return false
             }
         }
-        return
     }
 
     static async DashboardController() {
