@@ -80,7 +80,6 @@ export class PathController {
     }
 
     static async NewPassword() {
-        console.log(newPassword.value, newPassword_conffirm.value)
         if (newPassword.value != newPassword_conffirm.value){
             PasswordError.innerHTML = "Senhas não conferem"
             return false

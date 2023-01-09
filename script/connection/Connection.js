@@ -34,7 +34,6 @@ export class Connection {
             },
             body: JSON.stringify(ReponseToApi.PasswordRecovery())
         });
-        console.log(connection)
         return connection
     }
 
@@ -65,7 +64,6 @@ export class Connection {
     }
 
     static async NewPassword() {
-        console.log(ReponseToApi.NewPassword())
         const connection = await fetch('https://authentication-api-pvz6.onrender.com/v1/new-password', {
             method: "PUT",
             headers: {

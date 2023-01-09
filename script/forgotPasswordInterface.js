@@ -102,7 +102,6 @@ window.tokenResend = function tokenResend() {
   const resendToken = document.getElementById("resend_token")
   if (ResendCount > 0){
     ResendCount--
-    console.log(ResendCount)
     Routes.TokenResend()  
   } else {
     resendToken.disabled = true
