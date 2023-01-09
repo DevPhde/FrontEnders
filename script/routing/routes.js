@@ -23,11 +23,13 @@ export class Routes {
             this.Login()
         }
     }
-    static async Dashboard() {
+    static async Dashboard(login) {
         const redirect = await PathController.DashboardController()
-        if (!redirect) {
-            this.Login()
+        if(login){
+            if(redirect) this.Login()
         }
+        if (!redirect) this.Login()
+
     }
     static async VerifyEmailToRecoveryPassword() {
         return await PathController.EmailVerify()

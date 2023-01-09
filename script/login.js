@@ -9,5 +9,5 @@ form.addEventListener('submit', (e) => {
 })
 
 if (sessionStorage.getItem('Hash')) {
-    Routes.Dashboard()
+    Routes.Dashboard(true)
 }
