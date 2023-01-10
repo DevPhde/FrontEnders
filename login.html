@@ -23,19 +23,31 @@
 
 <body>
   <header>
-    <div class="dropdown">
-      <a class="btn btn-light dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-        Menu
-      </a>
-      <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="index.html">Início</a></li>
-        <li><a class="dropdown-item" href="#">Nossos Pacotes</a></li>
-        <li><a class="dropdown-item" href="#">Quem Somos</a></li>
-        <li><a class="dropdown-item" href="login.html">Acessar</a></li>
-        <li><a class="dropdown-item" href="form.html">Cadastro</a></li>
-      </ul>
-    </div>
-  </header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav" style="background-color: #0a4275;">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown"  aria-expanded="false">
+                  Menu
+                </a>
+                <ul class="dropdown-menu fundo" style="background-color: #0a4275;">
+                    <li><a class="dropdown-item text-light" href="index.html">Início</a></li>
+                    <li><a class="dropdown-item text-light" href="#">Nossos Pacotes</a></li>
+                    <li><a class="dropdown-item text-light" href="#">Quem Somos</a></li>
+                    <li><a class="dropdown-item text-light" href="login.html">Acessar</a></li>
+                    <li><a class="dropdown-item text-light" href="form.html">Cadastro</a></li>                
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <h4><span style="color: #0a4275;">F</span>ront<span style="color: #0a4275;">E</span>nders</h4>
+          <figure class="image is-64x64" style="margin-right: 15px;">
+              <img src="./img/logo.png">
+          </figure>  
+        </div>
+    </nav>
+</header>
   <br>
   <main>
     <div class="container col-xl-10 col-xxl-8 px-4 py-5">

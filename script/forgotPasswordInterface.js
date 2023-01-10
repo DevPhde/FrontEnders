@@ -116,7 +116,6 @@ $(function () {
   function rescaleCaptcha() {
     let form = $('.form_').parent().width();
     let scale;
-    console.log("form=> " +form)
     if(form == 352){
       scale = 0.9;
     } else if (form < 346) {
@@ -134,3 +133,4 @@ $(function () {
   rescaleCaptcha();
   $(window).resize(function () { rescaleCaptcha(); });
 });
+
