@@ -27,19 +27,19 @@ window.nextPrev = async function nextPrev(n) {
     return false
   }
   if (currentTab == 0) {
-    removerror("emailError")
+    removeError("emailError")
     const result = await Routes.VerifyEmailToRecoveryPassword()
     if (!result){
       return false
     } 
   }
   if (currentTab == 1) {
-    removerror("tokenError")
+    removeError("tokenError")
     const result = await Routes.VerifyToken()
     if (!result) return false
   }
   if (currentTab == 2) {
-    removerror("PasswordError")
+    removeError("PasswordError")
     const result = await Routes.NewPassword()
     if(!result) return false
   }
@@ -106,11 +106,14 @@ window.cancelRecovery = function cancelRecovery() {
   window.location.reload(true)
 }
 
-function removerror(param){
+function removeError(param){
   const pError = document.getElementById(param);
   pError.innerHTML = "";
 }
 
+window.onbeforeunload = function(){
+  sessionStorage.clear()
+};
 
 $(function () {
   function rescaleCaptcha() {
