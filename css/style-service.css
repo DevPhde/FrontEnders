@@ -35,13 +35,14 @@ main{
     justify-content: center;
 }
 footer{
-    padding-top: 6em;
+    /* padding-top: 6em; */
 }
 nav{
     display: flex;
     text-align: left;
     align-items: flex-end;
-    
-
+}
+.logo {
+    width: 35px;
 }
 
