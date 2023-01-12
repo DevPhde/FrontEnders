@@ -27,7 +27,7 @@ export class Routes {
     static async DashboardRedirect() {
         const redirect = await PathController.DashboardController()
         if (redirect)  {
-            window.location.replace("https://devphde.github.io/FrontEnders/dashboard.html")
+            window.location.replace("http://127.0.0.1:5500/dashboard.html")
         } else {
             this.Login()
         }
@@ -35,7 +35,7 @@ export class Routes {
 
     static async Dashboard() {
         const redirect = await PathController.DashboardController()
-        !redirect ? this.Login() : true
+        return !redirect ? this.Login() : true
     }
 
     static async VerifyEmailToRecoveryPassword() {
