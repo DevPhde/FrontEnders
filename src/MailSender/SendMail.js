@@ -18,16 +18,12 @@ async function sendMail(name, userMail, token) {
             from: 'noreply <contato.frontenders@outlook.com>',
             to: `${userMail}`,
             subject: 'Token para recuperação de senha',
-            text: `Olá!  ${name},\n Este é seu token para recuperação de senha.
-        Token: ${token}\n
-            Este Token é válido por 10 minutos.`
+            text: `Olá! ${name},\nEste é seu token para recuperação de senha.\nToken: ${token}\nEste Token é válido por 10 minutos.\nAtenciosamente, Equipe FrontEnders.`
         })
         return true
     }
-    catch (err) {
-        if (err) {
-            return false
-        }
+    catch {
+        return false
     }
 }
 
