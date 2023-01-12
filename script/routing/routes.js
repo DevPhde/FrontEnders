@@ -27,26 +27,26 @@ export class Routes {
     static async DashboardRedirect() {
         const redirect = await PathController.DashboardController()
         if (redirect)  {
-            // this.Dashboard(commingLogin)
             window.location.replace("https://devphde.github.io/FrontEnders/dashboard.html")
         } else {
             this.Login()
         }
     }
+
     static async Dashboard() {
         const redirect = await PathController.DashboardController()
-        // if(commingLogin){
-        //     if(redirect) window.location.replace("https://devphde.github.io/FrontEnders/dashboard.html")
-        // }
-        if (!redirect) this.Login()
+        !redirect ? this.Login() : true
     }
+
     static async VerifyEmailToRecoveryPassword() {
         return await PathController.EmailVerify()
 
     }
+
     static async VerifyToken(){
         return await PathController.TokenVerify()
     }
+
     static async TokenResend(){
         return await PathController.TokenResend()
     }
