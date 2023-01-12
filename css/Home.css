@@ -7,8 +7,12 @@
 .div_quality {
     border: solid grey 2px;
     border-radius: 100px;
-};
+}
 
 .img_quality{
     border-radius: 150px
+}
+
+.logo {
+    width: 35px;
 }
