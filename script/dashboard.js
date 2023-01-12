@@ -12,3 +12,4 @@ window.onload = async () => {
 
 
 
+// fazer lógica do botao de logout
