@@ -86,7 +86,7 @@
             id="token_input">
         </div>
         <div class="text-center">
-          <button onclick="tokenResend()" id="resend_token" type="button" class="btn btn-outline-success m-4 ">Reenviar
+          <button onclick="tokenResend()" id="resend_token" type="button" class="btn btn-outline-success m-4 resend_token">Reenviar
             Email</button>
         </div>
       </div>
@@ -97,10 +97,10 @@
         <p class="text-center mb-1">Preencha o campo abaixo com sua nova senha.</p>
         <div class="mb-3">
           <p id="PasswordError" class="errors text-center text-danger"></p>
-          <input type="email" placeholder="Nova Senha" oninput="this.className = ''" name="password" id="newPassword">
+          <input type="password" placeholder="Nova Senha" oninput="this.className = ''" name="password" id="newPassword">
         </div>
         <div class="mb-3">
-          <input type="email" placeholder="Confirmar Nova Senha" oninput="this.className = ''" name="password_conffirm"
+          <input type="password" placeholder="Confirmar Nova Senha" oninput="this.className = ''" name="password_conffirm"
             id="newPassword_conffirm">
         </div>
       </div>
@@ -156,7 +156,7 @@
   function validateCaptcha() {
     let step = true
     if (step) {
-      if (grecaptcha.getResponse() == "") {
+      if (!grecaptcha.getResponse() == "") {
         alert("Captcha Obrigatório")
         return false
       } else {

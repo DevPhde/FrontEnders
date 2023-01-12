@@ -87,6 +87,7 @@ window.tokenResend = function tokenResend() {
   const resendToken = document.getElementById("resend_token")
   if (ResendCount > 0){
     ResendCount--
+    alert(`Email Enviado! \nNão se esqueça de conferir o SPAM.`)
     Routes.TokenResend()  
   } else {
     resendToken.disabled = true

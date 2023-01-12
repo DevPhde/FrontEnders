@@ -1,4 +1,5 @@
-import { Connection } from "../connection/Connection.js";
+import { fetchApi } from "../connection/Connection.js";
+import { ResponseToApi } from "../entities/Response.js";
 import { Routes } from "../routing/routes.js";
 
 const userError = document.getElementById("userError")
@@ -13,7 +14,7 @@ const newPassword_conffirm = document.getElementById("newPassword_conffirm")
 export class PathController {
 
     static async LoginController() {
-        const connection = await Connection.LoginAuth()
+        const connection = await fetchApi('/v1/login', 'POST', false, ResponseToApi.loginUser())
         const response = await connection.json();
         if (!response.result) {
             userError.innerHTML = response.message
@@ -31,13 +32,13 @@ export class PathController {
     }
 
     static async DashboardController() {
-        const connection = await Connection.DashboardConnection();
+        const connection = await fetchApi('/v1/dashboard', 'POST', true)
         const response = await connection.json() // usar response pro dashboard view
         return connection.status == 401 ? false : connection.status == 301 ? true : false;
     }
 
     static async EmailVerify() {
-        const connection = await Connection.VerifyValidEmailToRecoveryPassword();
+        const connection = await fetchApi('/v1/password-recovery', 'POST', false, ResponseToApi.PasswordRecovery())
         const response = await connection.json()
 
         if (connection.status == 500) {
@@ -53,7 +54,7 @@ export class PathController {
         }
     }
     static async TokenVerify() {
-        const connection = await Connection.TokenVerify()
+        const connection = await fetchApi('/v1/token-verify', 'POST', true, ResponseToApi.Token())
         const response = await connection.json()
         if (connection.status != 200) {
             if (response == 'INVALID JWT') {
@@ -68,7 +69,7 @@ export class PathController {
     }
 
     static async TokenResend() {
-        const connection = await Connection.TokenResend()
+        const connection = await fetchApi('/v1/token-resend', 'POST', true, { "hash": sessionStorage.getItem('Hash') })
         const response = await connection.json()
         if (response == 'INVALID JWT'){
             Routes.RecoveryView()
@@ -85,7 +86,7 @@ export class PathController {
             PasswordError.innerHTML = "Senhas não conferem"
             return false
         }
-        const connection = await Connection.NewPassword()
+        const connection = await fetchApi('/v1/new-password', 'PUT', true, ResponseToApi.NewPassword())
         const response = await connection.json()
         if (response == 'INVALID JWT'){
             Routes.RecoveryView()
@@ -99,7 +100,7 @@ export class PathController {
     }
     
     static async Logout() {
-        const connection = await Connection.Logout();
+        const connection = await fetchApi('/v1/user/logout', 'POST', true)
         if (connection.status == 200) {
             return true
         }

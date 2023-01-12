@@ -3,7 +3,7 @@ let password = document.getElementById("floatingPassword")
 let token = document.getElementById("token_input")
 let newPassword = document.getElementById("newPassword")
 
-export class ReponseToApi {    
+export class ResponseToApi {    
     static loginUser() {
         return {
             "email": email.value,
