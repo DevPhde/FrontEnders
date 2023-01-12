@@ -2,9 +2,11 @@
 <html lang="pt-br">
 
 <head>
+  <link rel="stylesheet" href="./css/style.css">
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="./img/logo.png" type="image/png">
   <title>Recuperação de Senha</title>
   <link rel="stylesheet" href="./css/forgot.css">
 </head>
@@ -21,36 +23,33 @@
   <!-- google font -->
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 
-  <header>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container-fluid">
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav" style="background-color: #0a4275;">
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                Menu
-              </a>
-              <ul class="dropdown-menu fundo" style="background-color: #0a4275;">
-                <li><a class="dropdown-item text-light" href="index.html">Início</a></li>
-                <li><a class="dropdown-item text-light" href="#">Nossos Pacotes</a></li>
-                <li><a class="dropdown-item text-light" href="#">Quem Somos</a></li>
-                <li><a class="dropdown-item text-light" href="login.html">Acessar</a></li>
-                <li><a class="dropdown-item text-light" href="form.html">Cadastro</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-        <h4><span style="color: #0a4275;">F</span>ront<span style="color: #0a4275;">E</span>nders</h4>
-        <figure class="image is-64x64" style="margin-right: 15px;">
-          <img src="./img/logo.png">
-        </figure>
+  <header class="bg-body-tertiary">
+    <div class="d-flex align-items-center">
+      <div class="dropdown">
+        <a class="btn btn-light dropdown-toggle" href="#" role="button" style="background-color: #0a4275;"
+          data-bs-toggle="dropdown" aria-expanded="false">
+          Menu
+        </a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="index.html">Início</a></li>
+          <li><a class="dropdown-item" href="#">Nossos Pacotes</a></li>
+          <li><a class="dropdown-item" href="who.html">Quem Somos</a></li>
+          <li><a class="dropdown-item" href="login.html">Acessar</a></li>
+          <li><a class="dropdown-item" href="form.html">Cadastro</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item active" href="forgotpass.html">Recuperar Senha</a></li>
+
+        </ul>
       </div>
-    </nav>
+      <div class="container-fluid d-flex justify-content-end align-items-center">
+        <h4><span style="color: #0a4275;">F</span>ront<span style="color: #0a4275;">E</span>nders</h4>
+        <img src="./img/logo.png" class="logo img-fluid">
+      </div>
+    </div>
   </header>
 
   <main>
-    <h1 class="text-center fs-4">Recuperação de Senha</h1>
+    <h1 class="text-center mt-3 fs-4">Recuperação de Senha</h1>
     <form id="signUpForm" class="form_" method="post" onsubmit="return false">
       <!-- start step indicators -->
       <div class="form-header d-flex mb-4">
