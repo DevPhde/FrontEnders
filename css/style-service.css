@@ -34,9 +34,6 @@ main{
     text-align: center;
     justify-content: center;
 }
-footer{
-    /* padding-top: 6em; */
-}
 nav{
     display: flex;
     text-align: left;
