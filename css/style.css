@@ -1,39 +1,20 @@
-.forgot{
-    text-align: center;
+.logo {
+    width: 35px;
 }
 
-.fundo{
-    background-color: #0a4275;
+.box {
+
+    width: 65%;
+    padding: 15px !important;
 }
 
-.nav-link{
-    color: #ffff;
-    background-color: #0a4275;
-}
-
-.nav-link:hover{
-    color: #ffff;
-}
-
-.box{
-    width: 800px;
-}
-
-.mother{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.us{
+.us {
     border-style: outset;
     border-color: #0a4275;
 }
 
-.media-content{
-    height: 75px;
-}
-
-.dropdown-item{
-    color: white;
+@media only screen and (max-width: 768px) {
+    .box {
+        min-width: 100%;
+    }
 }
