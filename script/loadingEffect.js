@@ -32,7 +32,7 @@ function typingEffect() {
 
       if (char < contactTexts[idx].length) typedtext.innerHTML += contactTexts[idx][char];
       if (char == contactTexts[idx].length + 1) removing = true;
-      if (removing) typedtext.innerHTML = typedtext.innerHTML.substring(-1, typedtext.innerHTML.length - 1);
+      if (removing) typedtext.innerHTML = typedtext.innerHTML.substring(0, typedtext.innerHTML.length - 1);
 
       char++;
 
@@ -60,10 +60,7 @@ function shuffleArray(array) {
 }
 
 
-// Define a função que será chamada a cada segundo
 function redirectToHome() {
   window.location.href = 'https://devphde.github.io/FrontEnders/home.html'
 }
-
-// Define o timer para chamar a função a cada 1000 milissegundos (1 segundo)
 setInterval(redirectToHome, 3000);
