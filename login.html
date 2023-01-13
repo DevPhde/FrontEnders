@@ -21,25 +21,42 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 
 <body>
-  <header class="bg-body-tertiary">
-    <div class="d-flex align-items-center">
+  <header style="background-color: #0a4275;" class=" p-2 fixed-top"> <!-- ou .bg-body-tertiary para outra cor-->
+    <div class="d-flex gap-3 align-items-center justify-content-between" style="grid-template-columns: 1fr 2fr;">
       <div class="dropdown">
-        <a class="btn btn-light dropdown-toggle" href="#" role="button" style="background-color: #0a4275;"
-          data-bs-toggle="dropdown" aria-expanded="false">
-          Menu
+        <a href="#"
+          class="d-flex text-white align-items-center col-lg-4 mb-2 mb-lg-0 link-dark text-decoration-none dropdown-toggle"
+          data-bs-toggle="dropdown" aria-expanded="false">Menu
         </a>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="home.html">Início</a></li>
-          <li><a class="dropdown-item" href="#">Nossos Pacotes</a></li>
+        <ul class="dropdown-menu text-small shadow">
+          <li><a class="dropdown-item active" href="home.html" aria-current="page">Home</a></li>
+          <li><a class="dropdown-item" href="service.html">Serviços</a></li>
           <li><a class="dropdown-item" href="who.html">Quem Somos</a></li>
           <li><a class="dropdown-item" href="form.html">Cadastro</a></li>
-          <li><hr class="dropdown-divider"></li>
-          <li><a class="dropdown-item active" href="login.html">Acessar</a></li>
+          <hr class="dropdown-divider">
+          <li><a class="dropdown-item" href="api.html">Nossa API</a></li>
         </ul>
       </div>
-      <div class="container-fluid d-flex justify-content-end align-items-center">
-        <h4><span style="color: #0a4275;">F</span>ront<span style="color: #0a4275;">E</span>nders</h4>
-        <img src="./img/logo.png" class="logo img-fluid">
+      <div class="text-center ">
+        <h4 class="text-white">FrontEnders</h4>
+      </div>
+      <div class="d-flex align-items-center justify-content-end">
+
+        <button type="button" class="btn btn-outline-dark text-white">Fazer login</button>
+        <!-- usar "visually-hidden" para deixar invisivel-->
+        <div class="visually-hidden flex-shrink-0 dropdown"> <!-- conteudo hidden-->
+          <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            <img src="./undraw_profile.svg" alt="mdo" width="32" height="32" class="rounded-circle">
+          </a>
+          <ul class="dropdown-menu text-small shadow">
+            <li><a class="dropdown-item" href="#">Dashboard.</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" href="#">Sign out</a></li>
+          </ul>
+        </div>
       </div>
     </div>
   </header>
