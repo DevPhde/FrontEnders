@@ -14,7 +14,11 @@ body {
 /* main {
   height: 500px
 } */
-.first__div {
+
+.first__div{
+  width: 60%;
+}
+.second__div {
   width: 20%;
 }
 
@@ -128,4 +132,25 @@ h2 {
   background: -moz-radial-gradient(50% 50%, ellipse, #20202D 0%, #101018 75%, #060612 100%);
   width: auto;
   margin: 10% 20% 15% 20%;
+}
+
+/* END CONTAINER AUTO MESSAGE */
+
+@media only screen and (max-width: 700px) {
+  .card__one {
+    margin-top: 25%;
+    width: 200px;
+    height: 220px;
+    font-size: smaller;
+  }
+  .first__div {
+    width: 100%;
+  }
+  .second__div {
+    width: 100%;
+  }
+  .img_quality {
+    visibility: hidden;
+  }
+
 }

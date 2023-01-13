@@ -1,27 +1,17 @@
-const title = document.getElementById("title"),
-  header = document.querySelector('header')
-menu = document.querySelector("#subHeader")
+$(function () {
+  function rescaleHome() {
+    let body = $('body').parent().width();
+    let scale;
+    console.log(body)
+    if (body < 600){
+      scale = 0.5
 
-const onScroll = (event) => {
-  const scrollPosition = event.target.scrollingElement.scrollTop;
-
-  // if (scrollPosition > 70) {
-  //   title.style.scale = "0.8";
-  //   title.style.translate = "0 100%";
-  //   title.style.translate = "0.5s";
-  //   title.classList.add("fixed-top")
-  //   header.classList.remove('bg-body-tertiary')
-  //   menu.classList.add("bg-body-tertiary");
-  //   menu.classList.add("fixed-top");
-  //   header.style.backgroundSize = "150%";
-  // } else {
-  //   header.style.backgroundSize = "180%";
-  //   title.style.scale = "1";
-  //   title.style.translate = "0  -10%";
-  // }
-};
-
-document.addEventListener("scroll", onScroll);
+    }
+    $('').css('transform', 'scale(' + scale + ')');
+  }
+  rescaleHome()
+  $(window).resize(function () {rescaleHome()});
+})
 
 
 // PARALLAX CARD
@@ -84,43 +74,6 @@ function typingEffect() {
 
 }
 typingEffect();
-function shuffleArray(array) {
-  let currentIndex = array.length,
-    temporaryValue, randomIndex;
-  while (0 !== currentIndex) {
-    randomIndex = Math.floor(Math.random() * currentIndex);
-    currentIndex -= 1;
-    temporaryValue = array[currentIndex];
-    array[currentIndex] = array[randomIndex];
-    array[randomIndex] = temporaryValue;
-  }
-  return array;
-}
-
-function typingEffectWho() {
-  const contactTexts = shuffleArray([]);
-  const typedtext = document.getElementsByClassName("typedtext")[0];
-  let removing = false;
-  let idx = char = 0;
-
-  setInterval(() => {
-
-    if (char < contactTexts[idx].length) typedtext.innerHTML += contactTexts[idx][char];
-    if (char == contactTexts[idx].length + 1) removing = true;
-    if (removing) typedtext.innerHTML = typedtext.innerHTML.substring(-1, typedtext.innerHTML.length - 1);
-
-    char++;
-
-    if (typedtext.innerHTML.length === 0) {
-      if (idx === contactTexts.length - 1) idx = 0
-      else idx++;
-      char = 0;
-      removing = false;
-    }
-  }, 100);
-
-}
-typingEffectWho();
 function shuffleArray(array) {
   let currentIndex = array.length,
     temporaryValue, randomIndex;
