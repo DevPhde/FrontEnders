@@ -26,5 +26,5 @@ Spanizer
 const button = document.querySelector('.startButton')
 
 button.addEventListener('click', ()=> {
-  window.location.href = 'http://127.0.0.1:5500/loading.html'
+  window.location.href = 'https://devphde.github.io/FrontEnders/loading.html'
 })
