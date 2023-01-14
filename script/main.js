@@ -2,16 +2,18 @@ $(function () {
   function rescaleHome() {
     let body = $('body').parent().width();
     let div = document.getElementById('responsivity__div')
-    
+    let image = document.getElementById('image__')
     let scale;
     console.log(body)
     if (body < 700){
-      div.classList.toggle('row');
-      div.classList.toggle('row-cols-2');
-      div.classList.toggle('row');
-      div.classList.toggle('row');
+      div.classList.remove('row');
+      div.classList.remove('row-cols-2');
+      image.classList.add('visually-hidden')
       scale = 0.5
-
+    } else {
+      div.classList.add('row');
+      div.classList.add('row-cols-2');
+      image.classList.remove('visually-hidden')
     }
     $('').css('transform', 'scale(' + scale + ')');
   }
@@ -54,7 +56,7 @@ const onMouseLeave = () => {
   card.style.transform = `none`;
 };
 
-
+// AUTO TYPING
 
 function typingEffect() {
   const contactTexts = shuffleArray(['Criptomoedas', 'Fundos Imobiliários', 'Ativos Financeiros']);

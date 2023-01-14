@@ -1,22 +1,13 @@
 body {
   font-family: "Euclid Circular A", "Poppins";
+  margin: 0;
+  padding: 0;
   /* background: #8367c5; */
   /* color: #1a1a1a */
 }
 /* HEADER */
 
-
-/* MAIN */
-.hr {
-  margin: 10% 30% 0% 30%;
-}
-
-/* main {
-  height: 500px
-} */
-
 .first__div{
-  /* padding: 20%; */
   margin: 0 10%;
 
 }
@@ -45,16 +36,6 @@ button {
 
 .banner h1 {
   font-size: 50px;
-}
-
-.banner button {
-  padding: 12px 36px;
-  border-radius: 50px;
-  border: 0;
-  background: #221e6f;
-  color: #f9f9f9;
-  font-size: 18px;
-  font-family: inherit;
 }
 
 .container {
@@ -86,7 +67,7 @@ h2 {
   width: 700px;
   height: 420px;
   border-radius: 16px;
-  background: url("./trade3.jpg");
+  background: url("../img/trade3.jpg");
   background-size: 110%;
   background-position: center;
   transition: 0.5s;
@@ -103,40 +84,6 @@ h2 {
   height: 2rem;
   width: 2rem;
 } */
-
-/* AUTO MESSAGE HOME */
-
-.container__message p {
-  text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
-  font-family: Courier, monospace;
-  margin: 0.8em 0;
-  font-size: 18px;
-  color: #B95;
-}
-
-.ghost,
-.glitch {
-  opacity: 0.25;
-}
-
-#animate {
-  text-shadow: 0 0 8px rgba(209, 194, 165, 0.1);
-  position: absolute;
-  color: #4f4228;
-  bottom: 0;
-}
-
-#container {
-  display: flex;
-  justify-content: center;
-  border-radius: 50px;
-  background: -webkit-radial-gradient(50% 50%, ellipse, #20202D 0%, #101018 75%, #060612 100%);
-  background: -moz-radial-gradient(50% 50%, ellipse, #20202D 0%, #101018 75%, #060612 100%);
-  width: auto;
-  margin: 10% 20% 15% 20%;
-}
-
-/* END CONTAINER AUTO MESSAGE */
 
 @media only screen and (max-width: 700px) {
   .card__one {
@@ -157,7 +104,7 @@ h2 {
 
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 450px) {
   .card__one {
     width: 220px;
     height: 150px;

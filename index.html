@@ -2,151 +2,147 @@
 <html lang="pt-br">
 
 <head>
-  <link rel="stylesheet" href="./css/Home.css">
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Inicio</title>
-
-  <!-- BULMA -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-
-  <!-- BOOTSTRAP 5 -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-
-
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="./img/logo.png" type="image/png">
+  <title>Home</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+  <link rel="stylesheet" href="./css/styles.css" />
 </head>
+<!-- FADE -->
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<!-- bootstrap 5 -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 
-<body>
+<body class="bg-dark">
+  <header style="background-color: #0a4275;" class=" p-2 fixed-top">
+    <div class="d-flex gap-3 align-items-center justify-content-between" style="grid-template-columns: 1fr 2fr;">
+      <div class="dropdown">
+        <a href="#"
+          class="d-flex text-white align-items-center col-lg-4 mb-2 mb-lg-0 link-dark text-decoration-none dropdown-toggle"
+          data-bs-toggle="dropdown" aria-expanded="false">Menu
+        </a>
+        <ul class="dropdown-menu text-small shadow">
+          <li><a class="dropdown-item active" href="home.html" aria-current="page">Home</a></li>
+          <li><a class="dropdown-item" href="service.html">Serviços</a></li>
+          <li><a class="dropdown-item" href="who.html">Quem Somos</a></li>
+          <li><a class="dropdown-item" href="form.html">Cadastro</a></li>
+          <hr class="dropdown-divider">
+          <li><a class="dropdown-item" href="api.html">Nossa API</a></li>
+        </ul>
+      </div>
+      <div class="text-center ">
+        <h4 class="text-white">FrontEnders</h4>
+      </div>
+      <div class="d-flex align-items-center justify-content-end">
 
-  <header class="bg-body-tertiary">
-    <div class="d-flex align-items-center">
-        <div class="dropdown">
-            <a class="btn btn-light dropdown-toggle" href="#" role="button" style="background-color: #0a4275;"
-                data-bs-toggle="dropdown" aria-expanded="false">
-                Menu
-            </a>
-            <ul class="dropdown-menu">
-                <li><a class="dropdown-item active" href="index.html">Início</a></li>
-                <li><a class="dropdown-item" href="services.html">Nossos Pacotes</a></li>
-                <li><a class="dropdown-item" href="who.html">Quem Somos</a></li>
-                <li><a class="dropdown-item" href="login.html">Acessar</a></li>
-                <li><a class="dropdown-item" href="form.html">Cadastro</a></li>
-            </ul>
+        <button type="button" class="btn btn-outline-dark "><a class="text-decoration-none text-white" href="login.html">Fazer login</a></button>
+        <!-- usar "visually-hidden" para deixar invisivel-->
+        <div class="visually-hidden flex-shrink-0 dropdown"> <!-- conteudo hidden-->
+          <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            <img src="./img/undraw_profile.svg" alt="mdo" width="32" height="32" class="rounded-circle">
+          </a>
+          <ul class="dropdown-menu text-small shadow">
+            <li><a class="dropdown-item" href="dashboard.html">Dashboard</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" href="#">Sign out</a></li>
+          </ul>
         </div>
-        <div class="container-fluid d-flex justify-content-end align-items-center">
-            <h4><span style="color: #0a4275;">F</span>ront<span style="color: #0a4275;">E</span>nders</h4>
-            <img src="./img/logo.png" class="logo img-fluid">
-        </div>
+      </div>
     </div>
-</header>
-
-  <div id="carouselExampleFade" class="carousel slide carousel-fade mb-5 container w-75" data-bs-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active" data-bs-interval="2000">
-        <img src="./img/pexels-kindel-media-8566473.jpg" style="max-height: 500px;" class="d-block w-100" alt="Robot">
-        <div class="carousel-caption d-none d-md-block">
-          <h2 class="">Aumente suas oportunidades de lucro com a ajuda do nosso smart robô.</h2>
-          <button type="button" class="btn btn-primary">Acessar Pacotes</button>
-        </div>
-      </div>
-      <div class="carousel-item" data-bs-interval="2000">
-        <img src="/img/pexels-pavel-danilyuk-8438918.jpg" alt="Robot vs human" style="max-height: 500px;"
-          class="d-block w-100">
-      </div>
-      <div class="carousel-item" data-bs-interval="2000">
-        <img src="/img/pexels-pixabay-373543.jpg" style="max-height: 500px;" class="d-block w-100"
-          alt="finance expectation">
+  </header>
+  <br>
+  <!-- PARALLAX-->
+  <section class="parallax">
+    <div id="card" class="card__one" onmousemove="onMouseMove(event)" onmouseleave="onMouseLeave(event)">
+      <div class="mb-5 text-center">
+        <p class="text-white mt-4 p-1">Nossa IA está pronta para atuar com </p><b
+          class="typedtext text-center text=text-justify"></b>
       </div>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
-
-  <section class="px-5">
-    <div class="mx-5 p-3 mb-2 bg-info text-white div_quality">
-      <div class="container col-xl-10 col-xxl-8 px-4 py-5">
-        <div class="row align-items-center g-lg-5 py-5">
-          <div id="destaqueSobre" class="col-lg-7 text-lg-start">
-            <img src="./img/img-graficos_calculadora.jpg" alt="notebook" class="w-75 img_quality"
-              style="border-radius: 50px;">
-          </div id="textoSobre">
-          <div class="mx-auto col-lg-5 mb-5">
-            <h2 class="mb-2">Quem Somos</h2>
-            <p>Somos uma starup que disponibiliza uma ferramenta poderosa para plataformas de criptoativos no mercado de
-              financeiro. Trabalhamos com foco total no mercado de day trade com a melhor e maior criptomoeda do mundo
-              que
-              é
-              o Bitcoin.
-              Bitcoin é uma moeda digital que permite pagamentos em transações online sem a necessidade de um
-              intermediário.
-              Baseada na rede blockchain, foi a pioneira entre as criptomoedas
-            </p>
-          </div>
-        </div>
-      </div>
   </section>
 
-  <section class="px-5">
-    <div class="p-3 mb-2 mx-5 div_quality bg-dark-subtle text-emphasis-info">
-      <div class="container col-xl-10 col-xxl-8 px-4 py-5">
-        <div class="row align-items-center g-lg-5 py-5">
-          <div id="destaqueSobre" class="col-lg-7 text-center text-lg-start">
-            <img src="./img/img-graficos_bitcoins.jpg" alt="bitcoins" class="w-75" style="border-radius: 50px;">
-          </div id="textoSobre">
-          <div class="mx-auto col-lg-5 mb-5">
-            <h2>Sobre o nosso produto</h2>
-            <p>Um robô trading diferente do que muitos pensam não é um robô de fato, devemos pensar mais com uma
-              ferramenta de automação para o mercado de criptomoedas que tem o intuito de facilitar o trabalho dos
-              nossos
-              clientes investidores.
-              O robô investidor trader opera no mercado financeiro a partir de uma regra pré-determinada, que envia
-              ordens
-              de compra e venda de uma ação. A proposta da automação é agilizar as movimentações na bolsa. Assim nossos
-              clientes investidores não precisam acompanhar diariamente as operações de day trade.</p>
-          </div>
+  <main class="text-white d-flex justify-content-center mt-5">
+
+    <section class="p-5 text-break mt-5">
+      <div class="mt-5" data-aos="flip-down" data-aos-offset="10">
+        <h3 class="text-center mb-3">O que é um bot de Trade?</h3>
+        <p class="">Um bot de trade é um robô que utiliza inteligência artificial (IA) para realizar transações
+          financeiras automaticamente, geralmente na bolsa de valores. Ele pode ser programado para seguir estratégias
+          de negociação específicas e tomar decisões com base em dados de mercado em tempo real. Isso permite que o bot
+          opere de forma independente, sem a necessidade de intervenção humana constante.</p>
+      </div>
+    <hr class="hr mb-5">
+
+    <div class="container text-center">
+      <div id="responsivity__div" class="row row-cols-2">
+        <div class="col-lg-6 mt-5 pt-5" id="image__" data-aos="fade-down">
+          <img src="./img/img-graficos_bitcoins.jpg" alt="notebook" class="w-75 mt-5 pt-5 img_quality"
+            style="border-radius: 100px;">
+        </div>
+        <div class="second__div mt-5" data-aos="fade-down">
+          <h2 class="text-center pt-4 m-5">Por que usar um bot de Trade?</h2>
+          <ul>
+            <li>
+              <p data-aos="flip-up" data-aos-offset="10" data-aos-mirror="true">Agilidade: Bots de trade podem analisar
+                grandes quantidades de dados e tomar decisões de trade
+                rapidamente, o que pode dar aos traders uma vantagem competitiva.</p>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <p data-aos="flip-up" data-aos-offset="10" data-aos-mirror="true">Consistência: Bots de trade podem ser
+                programados para seguir estratégias de trade específicas e tomar
+                decisões de trade de forma consistente, o que pode ajudar a reduzir erros emocionais.</p>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <p data-aos="flip-down" data-aos-offset="10" data-aos-mirror="true">Escala: Bots de trade podem negociar
+                em múltiplas exchanges simultaneamente, o que pode aumentar a
+                exposição e potencial de lucro.</p>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <p data-aos="flip-up" data-aos-offset="10" data-aos-mirror="true">Automatização: Bots de trade podem ser
+                programados para realizar tarefas de trade de forma
+                automatizada, o que pode economizar tempo e esforço para os traders.</p>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <p data-aos="flip-down" data-aos-offset="10" data-aos-mirror="true">Análise de dados: Bots de trade podem
+                analisar grandes quantidades de dados de mercado, possibilitando
+                uma análise mais aprofundada e precisa.</p>
+            </li>
+          </ul>
         </div>
       </div>
-  </section>
 
-  <section class="px-5 mb-5">
-    <div class="p-3 mb-2 mx-5 div_quality bg-info-subtle text-emphasis-info">
-      <div class="container col-xl-10 col-xxl-8 px-4 py-5">
-        <div class="row align-items-center g-lg-7 py-5">
-          <div id="destaqueSobre" class="col-lg-7 text-center text-lg-start">
-            <img src="./img/robo bitcoin.jpg" alt="robo bit" class="w-75" style="border-radius: 50px;">
-          </div id="textoSobre">
-          <div class="mx-auto col-lg-5 mb-5">
-            <h2>Sobre o nosso produto</h2>
-            <p>Tenha (aqui entra o nome do nosso robô) todo mês ativando nossos planos personalizados para cada tipo de
-              cliente.
-              Aumente suas oportunidades de lucro com a ajuda do nosso smart robô.
-              Por que usar robôs de trading?
-              Os robôs trading são uma automatização de estratégias que utilizam análise técnica e estatística para
-              buscar
-              operações de Day Trade.
-          </div>
-        </div>
-      </div>
-  </section>
-
-  </main>
-  <footer class="text-center text-white footer_quality" style="background-color: #0a4275;">
-    <div class="container p-4 pb-0">
-      <section class="">
-        <p class="d-flex justify-content-center align-items-center">
-          <span class="me-3">Crie sua conta grátis!</span>
-          <a href="form.html"><button type="button" class="btn btn-outline-light btn-rounded">
-              Criar
-            </button></a>
+    <div data-aos="fade-up" class="pt-5 mb-5">
+        <p>
+          Maximize seus lucros e reduza seus riscos com a inteligência artificial no trade: cadastre-se agora e
+          experimente as possibilidades.
         </p>
+        <button type="button" class="btn btn-primary text-center"><a class="text-decoration-none text-white" href="form.html">Cadastrar</a></button>
+      </div>
+    </div>
+    </section>
+  </main>
+
+  <footer class="text-center text-white mt-5" style="background-color: #0a4275;">
+    <div class=" p-4 pb-0">
+      <section class="">
+        <p class="d-flex justify-content-center align-items-center">Trabalho de conclusão - Módulo 2</p>
     </div>
     <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
       © 2022 Copyright: Squad 5 - Programadores Cariocas
@@ -158,9 +154,20 @@
     integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
     crossorigin="anonymous"></script>
 
+  <!-- JQUERY -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <!-- JS -->
+  <script type="text/javascript" src="./script/main.js"></script>
+  <script src="./scriptHomeMessage.js"></script>
 
-  <script src="/script.js"></script>
-
+  <!-- FADE JS -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      delay: 200,
+      duration: 3000 // values from 0 to 3000, with step 50ms
+    });
+  </script>
 </body>
 
 </html>
