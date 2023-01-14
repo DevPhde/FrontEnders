@@ -1,6 +1,10 @@
 body{
   font-family: 'Open Sans', sans-serif;
 }
+main {
+  min-height: 760px;
+}
+
 #signUpForm {
   max-width: 500px;
   background-color: #ffffff;
