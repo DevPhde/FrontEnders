@@ -1,135 +1,134 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
-    <!-- links -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <!-- end links -->
-    <link rel="stylesheet" href="/css/style.css">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="./img/logo.png" type="image/png">
+  <title>Cadastro</title>
 </head>
 
-<body>
+<!-- BOOTSTRAP 5 -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 
-    <header style="background-color: #0a4275;" class=" p-2 fixed-top"> <!-- ou .bg-body-tertiary para outra cor-->
-        <div class="d-flex gap-3 align-items-center justify-content-between" style="grid-template-columns: 1fr 2fr;">
-          <div class="dropdown">
-            <a href="#"
-              class="d-flex text-white align-items-center col-lg-4 mb-2 mb-lg-0 link-dark text-decoration-none dropdown-toggle"
-              data-bs-toggle="dropdown" aria-expanded="false">Menu
-            </a>
-            <ul class="dropdown-menu text-small shadow">
-              <li><a class="dropdown-item active" href="home.html" aria-current="page">Home</a></li>
-              <li><a class="dropdown-item" href="service.html">Serviços</a></li>
-              <li><a class="dropdown-item" href="who.html">Quem Somos</a></li>
-              <li><a class="dropdown-item" href="form.html">Cadastro</a></li>
+<!-- BULMA -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+<body class="bg-dark">
+
+  <header style="background-color: #0a4275;" class=" p-2 fixed-top"> <!-- ou .bg-body-tertiary para outra cor-->
+    <div class="d-flex gap-3 align-items-center justify-content-between" style="grid-template-columns: 1fr 2fr;">
+      <div class="dropdown">
+        <a href="#"
+          class="d-flex text-white align-items-center col-lg-4 mb-2 mb-lg-0 link-dark text-decoration-none dropdown-toggle"
+          data-bs-toggle="dropdown" aria-expanded="false">Menu
+        </a>
+        <ul class="dropdown-menu text-small shadow">
+          <li><a class="dropdown-item active" href="home.html" aria-current="page">Home</a></li>
+          <li><a class="dropdown-item" href="service.html">Serviços</a></li>
+          <li><a class="dropdown-item" href="who.html">Quem Somos</a></li>
+          <li><a class="dropdown-item" href="form.html">Cadastro</a></li>
+          <hr class="dropdown-divider">
+          <li><a class="dropdown-item" href="api.html">Nossa API</a></li>
+        </ul>
+      </div>
+      <div class="text-center ">
+        <h4 class="text-white">FrontEnders</h4>
+      </div>
+      <div class="d-flex align-items-center justify-content-end">
+
+        <button type="button" class="btn btn-outline-dark text-white">Fazer login</button>
+        <!-- usar "visually-hidden" para deixar invisivel-->
+        <div class="visually-hidden flex-shrink-0 dropdown"> <!-- conteudo hidden-->
+          <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            <img src="./undraw_profile.svg" alt="mdo" width="32" height="32" class="rounded-circle">
+          </a>
+          <ul class="dropdown-menu text-small shadow">
+            <li><a class="dropdown-item" href="#">Dashboard.</a></li>
+            <li>
               <hr class="dropdown-divider">
-              <li><a class="dropdown-item" href="api.html">Nossa API</a></li>
-            </ul>
-          </div>
-          <div class="text-center ">
-            <h4 class="text-white">FrontEnders</h4>
-          </div>
-          <div class="d-flex align-items-center justify-content-end">
-    
-            <button type="button" class="btn btn-outline-dark text-white">Fazer login</button>
-            <!-- usar "visually-hidden" para deixar invisivel-->
-            <div class="visually-hidden flex-shrink-0 dropdown"> <!-- conteudo hidden-->
-              <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                <img src="./undraw_profile.svg" alt="mdo" width="32" height="32" class="rounded-circle">
-              </a>
-              <ul class="dropdown-menu text-small shadow">
-                <li><a class="dropdown-item" href="#">Dashboard.</a></li>
-                <li>
-                  <hr class="dropdown-divider">
-                </li>
-                <li><a class="dropdown-item" href="#">Sign out</a></li>
-              </ul>
-            </div>
-          </div>
+            </li>
+            <li><a class="dropdown-item" href="#">Sign out</a></li>
+          </ul>
         </div>
-      </header>
-      <br>
-    
+      </div>
+    </div>
+  </header>
+  <br>
+
+  <br>
+
+  <main class="mt-5">
+    <h3 class="text-center text-white" style="margin: 15px;">Preencha o formulário de inscrição:</h3>
+    <div class="col-md-10 mx-auto col-lg-5">
+      <form class="p-4 p-md-5 border rounded-3 bg-light">
+        <div class="form-floating mb-3">
+          <input type="text" id="name" class="form-control border border-secondary" required placeholder="fullName">
+          <label for="floatingInput">Nome Completo</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input type="email" id="email" class="form-control border border-secondary" placeholder="name@example.com">
+          <label for="floatingInput">Email</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input type="password" id="password" class="form-control border border-secondary" required placeholder="Password">
+          <label for="floatingPassword">Senha</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input type="password" id="check" class="form-control border border-secondary" required placeholder="Password">
+          <label for="floatingPassword">Confirmação de senha</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input type="text" id="identidy" class="form-control border border-secondary" required placeholder="RG">
+          <label for="floatingInput">RG</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input type="text" name="zp" id="zip" required onblur="pesquisaCep(this.value)" class="form-control border border-secondary"
+            placeholder="00.000-000">
+          <label for="floatingInput">CEP</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input name="rua" type="text" id="street" class="form-control border border-secondary" placeholder="street">
+          <label for="floatingInput">Rua</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input name="bairro" type="text" id="district" class="form-control border border-secondary" placeholder="district">
+          <label for="floatingInput">Bairro</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input name="cidade" type="text" id="city" class="form-control border border-secondary" placeholder="city">
+          <label for="floatingInput">Cidade</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input name="uf" type="text" id="uf" class="form-control border border-secondary" placeholder="state">
+          <label for="floatingInput">Estado</label>
+        </div>
+        <input class="w-100 btn-lg btn btn-dark" type="submit" value="Cadastrar">
+      </form>
+    </div>
     <br>
+  </main>
 
-    <main>
-        <h3 style="text-align: center; margin: 15px;">Preencha o formulário de inscrição:</h3>
-        <div class="col-md-10 mx-auto col-lg-5">
-            <form class="p-4 p-md-5 border rounded-3 bg-light">
-                <div class="form-floating mb-3">
-                    <input type="text" id="name" class="form-control" required placeholder="name@example.com">
-                    <label for="floatingInput">Nome Completo</label>
-                </div>
-                <div class="form-floating mb-3">
-                    <input type="email" id="email" class="form-control" placeholder="name@example.com">
-                    <label for="floatingInput">Email</label>
-                </div>
-                <div class="form-floating mb-3">
-                    <input type="password" id="password" class="form-control" required placeholder="Password">
-                    <label for="floatingPassword">Senha</label>
-                </div>
-                <div class="form-floating mb-3">
-                    <input type="password" id="check" class="form-control" required placeholder="Password">
-                    <label for="floatingPassword">Confirmação de senha</label>
-                </div>
-                <div class="form-floating mb-3">
-                    <input type="text" id="identidy" class="form-control" required placeholder="name@example.com">
-                    <label for="floatingInput">RG</label>
-                </div>
-                <div class="form-floating mb-3">
-                    <input type="text" name="zp" id="zip" required onblur="pesquisaCep(this.value)" class="form-control"
-                        placeholder="name@example.com">
-                    <label for="floatingInput">CEP</label>
-                </div>
-                <div class="form-floating mb-3">
-                    <input name="rua" type="text" id="street" class="form-control" placeholder="name@example.com">
-                    <label for="floatingInput">Rua</label>
-                </div>
-                <div class="form-floating mb-3">
-                    <input name="bairro" type="text" id="district" class="form-control" placeholder="name@example.com">
-                    <label for="floatingInput">Bairro</label>
-                </div>
-                <div class="form-floating mb-3">
-                    <input name="cidade" type="text" id="city" class="form-control" placeholder="name@example.com">
-                    <label for="floatingInput">Cidade</label>
-                </div>
-                <div class="form-floating mb-3">
-                    <input name="uf" type="text" id="uf" class="form-control" placeholder="name@example.com">
-                    <label for="floatingInput">Estado</label>
-                </div>
-                <input class="w-100 btn btn-lg btn-primary" type="submit" value="Enviar">
-            </form>
-        </div>
-        <br>
-    </main>
+  <footer class="text-center text-white mt-5" style="background-color: #0a4275;">
+    <div class=" p-4 pb-0">
+      <section>
+        <p class="d-flex justify-content-center align-items-center">Trabalho de conclusão - Módulo 2</p>
+    </div>
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2022 Copyright: Squad 5 - Programadores Cariocas
+    </div>
+  </footer>
 
-    <footer class="text-center text-white mt-5" style="background-color: #0a4275;">
-        <div class="container p-4 pb-0">
-          <section class="">
-            <p class="d-flex justify-content-center align-items-center">
-              <span class="me-3">Crie sua conta grátis!</span>
-              <a href="form.html"><button type="button" class="btn btn-outline-light btn-rounded">
-                  Criar
-                </button></a>
-            </p>
-        </div>
-        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-          © 2022 Copyright: Squad 5 - Programadores Cariocas
-        </div>
-      </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+  <script src="./script/register.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-    <!-- <script src="/js/script.js"></script> -->
-    
 </body>
 
 </html>
