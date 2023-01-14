@@ -1,9 +1,15 @@
 $(function () {
   function rescaleHome() {
     let body = $('body').parent().width();
+    let div = document.getElementById('responsivity__div')
+    
     let scale;
     console.log(body)
-    if (body < 600){
+    if (body < 700){
+      div.classList.toggle('row');
+      div.classList.toggle('row-cols-2');
+      div.classList.toggle('row');
+      div.classList.toggle('row');
       scale = 0.5
 
     }

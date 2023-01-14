@@ -8,7 +8,7 @@ body {
 
 /* MAIN */
 .hr {
-  margin: 10% 30% 5% 30%;
+  margin: 10% 30% 0% 30%;
 }
 
 /* main {
@@ -16,7 +16,9 @@ body {
 } */
 
 .first__div{
-  width: 60%;
+  /* padding: 20%; */
+  margin: 0 10%;
+
 }
 .second__div {
   width: 20%;
@@ -81,8 +83,8 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 500px;
-  height: 320px;
+  width: 700px;
+  height: 420px;
   border-radius: 16px;
   background: url("./trade3.jpg");
   background-size: 110%;
@@ -139,9 +141,9 @@ h2 {
 @media only screen and (max-width: 700px) {
   .card__one {
     margin-top: 25%;
-    width: 200px;
-    height: 220px;
-    font-size: smaller;
+    width: 400px;
+    height: 320px;
+    font-size: small;
   }
   .first__div {
     width: 100%;
@@ -152,5 +154,15 @@ h2 {
   .img_quality {
     visibility: hidden;
   }
+
+}
+
+@media only screen and (max-width: 400px) {
+  .card__one {
+    width: 220px;
+    height: 150px;
+    font-size: smaller;
+  }
+  
 
 }
