@@ -113,7 +113,7 @@ h2 {
 /* 'QUEM SOMOS' PAGE */
 
 .main_who {
-  min-height: 700px;
+  min-height: 810px;
 }
 .box {
   width: 65%;
@@ -138,6 +138,6 @@ h2 {
 /* LOGIN PAGE */
 
 .main_login {
-  min-height: 750px;
+  min-height: 850px;
   margin: 5% 15%
 }
