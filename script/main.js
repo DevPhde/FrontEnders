@@ -9,13 +9,11 @@ $(function () {
       div.classList.remove('row');
       div.classList.remove('row-cols-2');
       image.classList.add('visually-hidden')
-      scale = 0.5
     } else {
       div.classList.add('row');
       div.classList.add('row-cols-2');
       image.classList.remove('visually-hidden')
     }
-    $('').css('transform', 'scale(' + scale + ')');
   }
   rescaleHome()
   $(window).resize(function () {rescaleHome()});
