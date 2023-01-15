@@ -19,6 +19,11 @@
     text: "Fomos criados para te ajudar, Humano."
   });
 
+  MESSAGES.push({
+    delay: 11000,
+    text: "Clique no botão abaixo para logar."
+  });
+
   $container = $("#container");
 
   $message = $("#message");
