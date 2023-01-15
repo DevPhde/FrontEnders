@@ -1,11 +1,5 @@
-<<<<<<< HEAD
-.env
-node_modules
-jsonExample.json
-=======
 node_modules
 .env
 jsonExample.json
 finance.js
 finance.html
->>>>>>> EPIC-HOME
