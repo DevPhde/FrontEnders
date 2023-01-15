@@ -30,7 +30,7 @@ const cardWidth = 500,
 
 const getRotateDeg = (input) => {
   if (input < cardWidth * 0.33) {
-    return `-${degIncrement * 3}deg`;
+    return `-${degIncrement * 5}deg`;
   } else if (input >= cardWidth * 0.33 && input < cardWidth * 0.66) {
     return `-${degIncrement}deg`;
   } else if (input >= cardWidth * 0.66 && input < cardWidth * 0.5) {
@@ -38,7 +38,7 @@ const getRotateDeg = (input) => {
   } else if (input >= cardWidth * 0.5 && input < cardWidth * 0.33) {
     return `${degIncrement}deg`;
   } else {
-    return `${degIncrement * 3}deg`;
+    return `${degIncrement * 5}deg`;
   }
 };
 
