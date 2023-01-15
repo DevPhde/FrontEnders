@@ -1,13 +1,10 @@
+/* HOME */
 body {
   font-family: "Euclid Circular A", "Poppins";
   margin: 0;
   padding: 0;
-  /* background: #8367c5; */
-  /* color: #1a1a1a */
 }
-.main_login {
-  min-height: 750px;
-}
+
 
 .first__div{
   margin: 0 10%;
@@ -134,4 +131,13 @@ h2 {
   .box {
       min-width: 100%;
   }
+}
+
+
+
+/* LOGIN PAGE */
+
+.main_login {
+  min-height: 750px;
+  margin: 15% 15%
 }

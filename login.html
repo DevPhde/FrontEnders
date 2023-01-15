@@ -20,7 +20,7 @@
 <!-- BULMA -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 
-<body>
+<body class="bg-dark">
   <header style="background-color: #0a4275;" class=" p-2 fixed-top">
     <div class="d-flex gap-3 align-items-center justify-content-between" style="grid-template-columns: 1fr 2fr;">
       <div class="dropdown">
@@ -29,7 +29,7 @@
           data-bs-toggle="dropdown" aria-expanded="false">Menu
         </a>
         <ul class="dropdown-menu text-small shadow">
-          <li><a class="dropdown-item active" href="home.html" aria-current="page">Home</a></li>
+          <li><a class="dropdown-item" href="home.html" aria-current="page">Home</a></li>
           <li><a class="dropdown-item" href="service.html">Serviços</a></li>
           <li><a class="dropdown-item" href="who.html">Quem Somos</a></li>
           <li><a class="dropdown-item" href="form.html">Cadastro</a></li>
@@ -62,21 +62,21 @@
   </header>
   <br>
   <main class="main_login">
-    <div class="container col-xl-10 col-xxl-8 px-4 py-5">
-      <div class="row align-items-center g-lg-5 py-5">
-        <div class="col-lg-7 text-center text-lg-start">
-          <img src="./img/trading bot.webp" class="bg" alt="img bot">
+    <div class="container col-xl-10 col-xxl-8 p-3 mx- mt-5 bg-white border rounded-5">
+      <div class="row align-items-center py-5">
+        <div class="col-lg-7 text-center">
+          <img src="./img/trading bot.webp" class="" alt="img bot">
         </div>
-        <div class="mx-auto col-lg-5">
+        <div class="mx-auto col-lg-5 px-5">
           <form class="p-4 p-md-5 border rounded-3 bg-light form_" data-form>
             <h5 class="text-center mb-4">Acessar</h5>
 
             <div class="form-floating mb-3">
-              <input type="email" class="form-control" id="email_input" placeholder="name@example.com">
+              <input type="email" class="form-control border-secondary" id="email_input" placeholder="name@example.com">
               <label for="email_input">Email</label>
             </div>
             <div class="form-floating mb-3">
-              <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+              <input type="password" class="form-control border-secondary" id="floatingPassword" placeholder="Password">
               <label for="floatingPassword">Senha</label>
             </div>
             <section> <!--ReCAPTCHA-->
