@@ -1,0 +1,14 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+main {
+    min-height: 800px;
+}
+
+.colum{
+    
+    width: 350px;
+    margin: 10px;
+}
+
