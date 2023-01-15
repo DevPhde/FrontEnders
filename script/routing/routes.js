@@ -15,6 +15,10 @@ export class Routes {
         window.location.replace("https://devphde.github.io/FrontEnders/forgotpass.html")
     }
 
+    static SavedNewUser() {
+        window.location.replace("https://devphde.github.io/FrontEnders/saved.html")
+    }
+
     static async LoginAuth() {
         const redirect = await PathController.LoginController()
         if (redirect) {
@@ -55,6 +59,9 @@ export class Routes {
         return await PathController.NewPassword()
     }
 
+    static async UserRegister() {
+        return await PathController.Register() ? this.SavedNewUser() : false
+    }
     static async Logout(dashboard){
         const redirect = await PathController.Logout()
         if (redirect && dashboard){

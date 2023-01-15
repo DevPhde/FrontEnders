@@ -3,8 +3,6 @@ $(function () {
     let body = $('body').parent().width();
     let div = document.getElementById('responsivity__div')
     let image = document.getElementById('image__')
-    let scale;
-    console.log(body)
     if (body < 700){
       div.classList.remove('row');
       div.classList.remove('row-cols-2');

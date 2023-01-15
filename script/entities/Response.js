@@ -27,4 +27,13 @@ export class ResponseToApi {
             "password": newPassword.value
         }
     }
+    static UserRegister(fullName, email, rg, password, cep){
+        return {
+            "fullName" : fullName,
+            "email" : email,
+            "rg" : rg,
+            "password": password,
+            "cep" : cep
+        }
+    }
 }
