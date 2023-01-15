@@ -2,6 +2,10 @@
     margin-top: 1rem;
 }
 
+main {
+  min-height: 800px;
+}
+
 .forgot{
     text-align: center;
 }

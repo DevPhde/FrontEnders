@@ -146,10 +146,10 @@
 
 
   function unHiddenMain() {
-    const main = document.querySelector("main")
+    const main = document.getElementById("login__button")
     main.hidden = false
   }
-  setInterval(unHiddenMain, 12000);
+  setInterval(unHiddenMain, 12500);
   
   initialise();
 

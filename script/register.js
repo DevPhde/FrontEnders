@@ -70,49 +70,49 @@ function compararSenha(){
     return password.value == passordConfirm.value ? true : false;
 }
 
-// async function sendForm(){
-//     const name = document.getElementById("name");
-//     const email = document.getElementById("email");
-//     const password = document.getElementById("password");
-//     const identidy = document.getElementById("identidy");
-//     const zip = document.getElementById("zip");
-//     const senha = compararSenha();
-//     if(!senha){
-//         alert("As senhas estão diferentes!");
-//         return
-//     }
-//     const user = new User(name.value, email.value, identidy.value, password.value, zip.value);
-//     fetchApi(user);
-//     const response = await fetchApi(user);
-//     const resposta = await response.json()
-//     console.log(response);
-//     console.log(resposta);
-// }
+async function sendForm(){
+    const name = document.getElementById("name");
+    const email = document.getElementById("email");
+    const password = document.getElementById("password");
+    const identidy = document.getElementById("identidy");
+    const zip = document.getElementById("zip");
+    const senha = compararSenha();
+    if(!senha){
+        alert("As senhas estão diferentes!");
+        return
+    }
+    const user = new User(name.value, email.value, identidy.value, password.value, zip.value);
+    fetchApi(user);
+    const response = await fetchApi(user);
+    const resposta = await response.json()
+    console.log(response);
+    console.log(resposta);
+}
 
-// class User{
-//     constructor(fullName, email, rg, password, cep){
-//         this.fullName = fullName;
-//         this.email = email;
-//         this.rg = rg;
-//         this.password = password;
-//         this.cep = cep;
-//     }
-// }
+class User{
+    constructor(fullName, email, rg, password, cep){
+        this.fullName = fullName;
+        this.email = email;
+        this.rg = rg;
+        this.password = password;
+        this.cep = cep;
+    }
+}
 
-// const formulary = document.querySelector('form');
-// formulary.addEventListener("click", (e)=>{
-//     sendForm();
-//     e.preventDefault();
-// })
+const formulary = document.querySelector('form');
+formulary.addEventListener("click", (e)=>{
+    sendForm();
+    e.preventDefault();
+})
 
-// async function fetchApi(user) {
-//     const connection = await fetch('https://authentication-api-pvz6.onrender.com/v1/user/register', {
-//         method: "POST",
-//         headers: {
-//             "content-type": "application/json",
-//             "Permissions-Policy": "interest-cohort=()"
-//         },
-//         body: JSON.stringify(user)
-//     });
-//     return connection
-// };
+async function fetchApi(user) {
+    const connection = await fetch('https://authentication-api-pvz6.onrender.com/v1/user/register', {
+        method: "POST",
+        headers: {
+            "content-type": "application/json",
+            "Permissions-Policy": "interest-cohort=()"
+        },
+        body: JSON.stringify(user)
+    });
+    return connection
+};
