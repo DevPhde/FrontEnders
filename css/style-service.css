@@ -2,44 +2,13 @@
     padding: 0;
     margin: 0;
 }
-main{
-    justify-content: center;
-}
-.forgot{
-    text-align: center;
+main {
+    min-height: 800px;
 }
 
-.fundo{
-    background-color: #0a4275;
-}
-
-.nav-link{
-    color: #ffff;
-    background-color: #0a4275;
-}
-
-.nav-link:hover{
-    color: #ffff;
-}
-
-.colunas{
+.colum{
     
     width: 350px;
     margin: 10px;
-}
-
-.mother{
-    display: flex;
-    flex-direction: row;
-    text-align: center;
-    justify-content: center;
-}
-nav{
-    display: flex;
-    text-align: left;
-    align-items: flex-end;
-}
-.logo {
-    width: 35px;
 }
 
