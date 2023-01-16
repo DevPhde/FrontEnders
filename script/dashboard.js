@@ -53,6 +53,8 @@ let barChart = new Chart(ctx1, {
 });
 
 
+// temporario, exclui o jwt se sair da pagina(independente se clica no botao logoout ou nao)
+
 window.onbeforeunload = function(){
     sessionStorage.clear()
   };

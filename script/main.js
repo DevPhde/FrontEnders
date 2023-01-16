@@ -3,6 +3,7 @@ $(function () {
     let body = $('body').parent().width();
     let div = document.getElementById('responsivity__div')
     let image = document.getElementById('image__')
+    let sectionTicker = document.getElementById("sect__ticker")
     if (body < 700){
       div.classList.remove('row');
       div.classList.remove('row-cols-2');
@@ -11,6 +12,10 @@ $(function () {
       div.classList.add('row');
       div.classList.add('row-cols-2');
       image.classList.remove('visually-hidden')
+    }
+    body < 315 ? sectionTicker.classList.add("mt-5") : sectionTicker.classList.remove('mt-5')
+    if (body < 315) {
+      
     }
   }
   rescaleHome()
