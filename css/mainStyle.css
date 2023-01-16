@@ -1,0 +1,143 @@
+/* HOME */
+body {
+  font-family: "Euclid Circular A", "Poppins";
+  margin: 0;
+  padding: 0;
+}
+
+
+.first__div{
+  margin: 0 10%;
+
+}
+.second__div {
+  width: 20%;
+}
+
+.banner,
+h1,
+button {
+  transition: 0.6s;
+}
+
+.banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 60%;
+  background: url("./finance-currency-business-money.jpg");
+  background-size: 100%;
+  background-position: center;
+  transition: 0.5s;
+}
+
+.banner h1 {
+  font-size: 50px;
+}
+
+.container {
+  padding: 60px 15%;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+
+
+/* PARALLAX CARD */
+.parallax {
+  margin: 10% auto 5% auto;
+  display: grid;
+  place-items: center;
+  perspective: 1000px;
+  height: 100%;
+  padding: 0;
+  font-family: "Euclid Circular A", "Poppins";
+  color: #f9f9f9;
+}
+
+.card__one {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 700px;
+  height: 420px;
+  border-radius: 16px;
+  background: url("../img/trade3.jpg");
+  background-size: 110%;
+  background-position: center;
+  transition: 0.5s;
+}
+
+
+.card h1 {
+  font-size: 38px;
+}
+
+/* PROFILE */
+/* .sidebar .nav-item .nav-link .img-profile,
+.topbar .nav-item .nav-link .img-profile {
+  height: 2rem;
+  width: 2rem;
+} */
+
+@media only screen and (max-width: 700px) {
+  .card__one {
+    margin-top: 25%;
+    width: 400px;
+    height: 320px;
+    font-size: small;
+  }
+  .first__div {
+    width: 100%;
+  }
+  .second__div {
+    width: 100%;
+  }
+  .img_quality {
+    visibility: hidden;
+  }
+
+}
+
+@media only screen and (max-width: 450px) {
+  .card__one {
+    width: 220px;
+    height: 150px;
+    font-size: smaller;
+  }
+}
+/* 'QUEM SOMOS' PAGE */
+
+.main_who {
+  min-height: 810px;
+}
+.box {
+  width: 65%;
+  padding: 15px !important;
+}
+
+.us {
+  border-style: outset;
+  border-color: #0a4275;
+}
+
+
+/* 'QUEM SOMOS' PAGE */
+@media only screen and (max-width: 768px) {
+  .box {
+      min-width: 100%;
+  }
+}
+
+
+
+/* LOGIN PAGE */
+
+.main_login {
+  min-height: 850px;
+  margin: 5% 15%
+}

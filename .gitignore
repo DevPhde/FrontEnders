@@ -1,3 +1,5 @@
-.env
 node_modules
+.env
 jsonExample.json
+finance.js
+finance.html
