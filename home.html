@@ -40,7 +40,8 @@
       </div>
       <div class="d-flex align-items-center justify-content-end">
 
-        <button type="button" class="btn btn-outline-dark "><a class="text-decoration-none text-white" href="login.html">Fazer login</a></button>
+        <button type="button" class="btn btn-outline-dark "><a class="text-decoration-none text-white"
+            href="login.html">Fazer login</a></button>
         <!-- usar "visually-hidden" para deixar invisivel-->
         <div class="visually-hidden flex-shrink-0 dropdown"> <!-- conteudo hidden-->
           <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown"
@@ -60,14 +61,47 @@
   </header>
   <section id="sect__ticker" class="mt-3">
     <br>
-  <br>
+    <br>
     <div hidden id="div__ticker" style="width: 100%; margin: 0 auto;">
       <div class="carouselTicker">
-          <ul class="carouselTicker__list text-white" id="carousel__home">
-          </ul>
+        <ul class="carouselTicker__list text-white" id="carousel__home">
+        </ul>
       </div>
   </section>
-  
+
+  <!--CARROUSEL-->
+  <section class="carrousel">
+    <div class="container">
+      <div class="container-fluid">
+        <div id="mainSlider" class="carousel slide" data-bs-ride="carousel">
+
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#mainSlider" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#mainSlider" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#mainSlider" data-bs-slide-to="2"></button>
+          </div>
+          <div class="carousel-inner" style="height: 30em; align-items: center; ">
+            <div class="carousel-item active h-100"
+              style="background-image: url(/img/carrousel/gif_carrousel1.gif); background-size: contain; background-repeat: no-repeat; background-position: center;">
+
+              <div class="carousel-caption d-none d-md-block">
+              </div>
+            </div>
+
+            <div class="carousel-item h-100"
+              style="background-image: url(/img/carrousel/gif_carrousel2.gif); background-size: contain; background-repeat: no-repeat; background-position: center;">
+
+              <div class="carousel-caption d-none d-md-block">
+              </div>
+            </div>
+
+            <div class="carousel-item h-100"
+              style="background-image: url(/img/carrousel/gif_carrousel3.gif); background-size: contain; background-repeat: no-repeat; background-position: center;">
+            </div>
+          </div>
+
+  </section>
+
   <!-- PARALLAX-->
   <section class="parallax">
     <div id="card" class="card__one" onmousemove="onMouseMove(event)" onmouseleave="onMouseLeave(event)">
@@ -88,62 +122,65 @@
           de negociação específicas e tomar decisões com base em dados de mercado em tempo real. Isso permite que o bot
           opere de forma independente, sem a necessidade de intervenção humana constante.</p>
       </div>
-    <hr class="hr mb-5">
+      <hr class="hr mb-5">
 
-    <div class="container text-center">
-      <div id="responsivity__div" class="row row-cols-2">
-        <div class="col-lg-6 mt-5 pt-5" id="image__" data-aos="fade-down">
-          <img src="./img/img-graficos_bitcoins.jpg" alt="notebook" class="w-75 mt-5 pt-5 img_quality"
-            style="border-radius: 100px;">
+      <div class="container text-center">
+        <div id="responsivity__div" class="row row-cols-2">
+          <div class="col-lg-6 mt-5 pt-5" id="image__" data-aos="fade-down">
+            <img src="./img/img-graficos_bitcoins.jpg" alt="notebook" class="w-75 mt-5 pt-5 img_quality"
+              style="border-radius: 100px;">
+          </div>
+          <div class="second__div mt-5" data-aos="fade-down">
+            <h2 class="text-center pt-4 mb-4">Por que usar um bot de Trade?</h2>
+            <ul>
+              <li>
+                <p data-aos="flip-up" data-aos-offset="10" data-aos-mirror="true">Agilidade: Bots de trade podem
+                  analisar
+                  grandes quantidades de dados e tomar decisões de trade
+                  rapidamente, o que pode dar aos traders uma vantagem competitiva.</p>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <p data-aos="flip-up" data-aos-offset="10" data-aos-mirror="true">Consistência: Bots de trade podem ser
+                  programados para seguir estratégias de trade específicas e tomar
+                  decisões de trade de forma consistente, o que pode ajudar a reduzir erros emocionais.</p>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <p data-aos="flip-down" data-aos-offset="10" data-aos-mirror="true">Escala: Bots de trade podem negociar
+                  em múltiplas exchanges simultaneamente, o que pode aumentar a
+                  exposição e potencial de lucro.</p>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <p data-aos="flip-up" data-aos-offset="10" data-aos-mirror="true">Automatização: Bots de trade podem ser
+                  programados para realizar tarefas de trade de forma
+                  automatizada, o que pode economizar tempo e esforço para os traders.</p>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <p data-aos="flip-down" data-aos-offset="10" data-aos-mirror="true">Análise de dados: Bots de trade
+                  podem
+                  analisar grandes quantidades de dados de mercado, possibilitando
+                  uma análise mais aprofundada e precisa.</p>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="second__div mt-5" data-aos="fade-down">
-          <h2 class="text-center pt-4 mb-4">Por que usar um bot de Trade?</h2>
-          <ul>
-            <li>
-              <p data-aos="flip-up" data-aos-offset="10" data-aos-mirror="true">Agilidade: Bots de trade podem analisar
-                grandes quantidades de dados e tomar decisões de trade
-                rapidamente, o que pode dar aos traders uma vantagem competitiva.</p>
-            </li>
-          </ul>
-          <ul>
-            <li>
-              <p data-aos="flip-up" data-aos-offset="10" data-aos-mirror="true">Consistência: Bots de trade podem ser
-                programados para seguir estratégias de trade específicas e tomar
-                decisões de trade de forma consistente, o que pode ajudar a reduzir erros emocionais.</p>
-            </li>
-          </ul>
-          <ul>
-            <li>
-              <p data-aos="flip-down" data-aos-offset="10" data-aos-mirror="true">Escala: Bots de trade podem negociar
-                em múltiplas exchanges simultaneamente, o que pode aumentar a
-                exposição e potencial de lucro.</p>
-            </li>
-          </ul>
-          <ul>
-            <li>
-              <p data-aos="flip-up" data-aos-offset="10" data-aos-mirror="true">Automatização: Bots de trade podem ser
-                programados para realizar tarefas de trade de forma
-                automatizada, o que pode economizar tempo e esforço para os traders.</p>
-            </li>
-          </ul>
-          <ul>
-            <li>
-              <p data-aos="flip-down" data-aos-offset="10" data-aos-mirror="true">Análise de dados: Bots de trade podem
-                analisar grandes quantidades de dados de mercado, possibilitando
-                uma análise mais aprofundada e precisa.</p>
-            </li>
-          </ul>
+
+        <div data-aos="fade-up" class="pt-5 mb-5">
+          <p>
+            Maximize seus lucros e reduza seus riscos com a inteligência artificial no trade: cadastre-se agora e
+            experimente as possibilidades.
+          </p>
+          <button type="button" class="btn btn-primary text-center"><a class="text-decoration-none text-white"
+              href="form.html">Cadastrar</a></button>
         </div>
       </div>
-
-    <div data-aos="fade-up" class="pt-5 mb-5">
-        <p>
-          Maximize seus lucros e reduza seus riscos com a inteligência artificial no trade: cadastre-se agora e
-          experimente as possibilidades.
-        </p>
-        <button type="button" class="btn btn-primary text-center"><a class="text-decoration-none text-white" href="form.html">Cadastrar</a></button>
-      </div>
-    </div>
     </section>
   </main>
 
