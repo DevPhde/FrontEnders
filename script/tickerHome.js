@@ -5,7 +5,7 @@ async function ticker() {
     for (let index = 0; index < actions.length; index++) {
         const element = actions[index];
         
-        const connection = await fetch(`https://brapi.dev/api/quote/${actions}?range=1d&interval=1d&fundamental=true`, {
+        const connection = await fetch(`https://brapi.dev/api/quote/${actions}?range=5d&interval=1d&fundamental=true`, {
         method: "GET",
         headers: {
             "content-type": "application/json"
