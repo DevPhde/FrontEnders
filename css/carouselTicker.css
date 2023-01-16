@@ -32,3 +32,13 @@
   border-right: 5px solid transparent;
   border-top: 5px solid red;
 }
+
+
+.carouselTicker__loader {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: #fff url("../images/loader.gif") center center no-repeat;
+}

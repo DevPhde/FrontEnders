@@ -1,8 +1,11 @@
 async function ticker() {
-    let randomActions = ['ABEV3', 'AMER3', 'AZUL4', 'BPAN4', 'CVCB3', 'ITUB4', 'PETR4', 'VALE3', 'VIVT3']
-    for (let index = 0; index < randomActions.length; index++) {
-        const element = randomActions[index];
-        const connection = await fetch(`https://brapi.dev/api/quote/${element}?range=1d&interval=1d&fundamental=true`, {
+    let actual = 0
+    let previous = 0
+    let actions = ['ABEV3', 'AMER3', 'AZUL4', 'BPAN4', 'CVCB3', 'ITUB4', 'PETR4', 'VALE3', 'VIVT3', 'COCA34', 'DISB34', 'AAPL34', 'BBDC4', 'COGN3', 'COGN3']
+    for (let index = 0; index < actions.length; index++) {
+        const element = actions[index];
+        
+        const connection = await fetch(`https://brapi.dev/api/quote/${actions}?range=1d&interval=1d&fundamental=true`, {
         method: "GET",
         headers: {
             "content-type": "application/json"
@@ -10,10 +13,10 @@ async function ticker() {
         
     });
     const response = await connection.json()
-    let actualValue = response['results']['0']['historicalDataPrice']['0']['close']
+    let actualValue = response['results'][actual]['historicalDataPrice']['0']['close'];actual ++
     actualValue = Math.round(actualValue * 100) / 100
     actualValue = parseFloat(actualValue)
-    let previousValue = response['results']['0']['historicalDataPrice']['0']['open']
+    let previousValue = response['results'][previous]['historicalDataPrice']['0']['open'];previous++
     previousValue = Math.round(previousValue * 100) / 100
     previousValue = parseFloat(previousValue)
     const ul = document.getElementById("carousel__home")
@@ -31,7 +34,6 @@ async function ticker() {
     li.appendChild(div)
     li.appendChild(bName)
     li.appendChild(bValue)
-    
     }
     const div = document.getElementById("div__ticker")
     div.hidden = false

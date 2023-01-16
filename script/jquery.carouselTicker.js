@@ -29,16 +29,6 @@
     var el = this,
       $el = $(this);
 
-    /**
-     * ===================================================================================
-     * = PRIVATE FUNCTIONS
-     * ===================================================================================
-     */
-
-    /**
-     * Initializes namespace settings to be used throughout plugin
-     */
-
     var _init = function () {
       // merge user-supplied options with defaults
       ticker.settings = $.extend({}, defaults, options);
