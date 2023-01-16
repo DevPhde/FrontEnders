@@ -166,8 +166,8 @@
 
 <!-- ReCaptcha -->
 <script>
+  let step = true
   function validateCaptcha() {
-    let step = true
     if (step) {
       if (grecaptcha.getResponse() == "") {
         alert("Captcha Obrigatório")
