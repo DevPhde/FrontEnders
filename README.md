@@ -2,7 +2,7 @@
 
 ## :memo: Descrição do projeto
 
-Neste projeto foi solicitado a criação de um website contendo 6 páginas (HOME, QUEM SOMOS, SERVIÇOS, LOGIN, RECUPERAÇÃO DE SENHA e CADASTRO) sobre um tema de nossa escolha.
+Neste projeto foi solicitado a criação de um website com um tema de nossa escolha.
 
 O tema escolhido pelo grupo foi de um BOT de trade, na qual, consistia na utilização de uma IA, que auxiliava o usuário na compra e venda de ações na bolsa de valores.
 
